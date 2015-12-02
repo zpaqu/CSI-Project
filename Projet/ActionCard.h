@@ -2,7 +2,7 @@
 #include "NoSplit.h"
 #include "Table.h"
 #include "Player.h"
-
+//test test test
 //Dont know what to do with wuery result yet...
 class QueryResult
 {
