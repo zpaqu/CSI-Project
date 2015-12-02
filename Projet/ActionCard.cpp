@@ -11,5 +11,14 @@ ActionCard::~ActionCard()
 
 }
 
+QueryResult ActionCard::query()
+{
+
+}
+
+void ActionCard::perform(Table&, Player*, QueryResult)
+{
+
+}
 
 
