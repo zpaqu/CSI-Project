@@ -2,6 +2,7 @@
 #include <memory> 
 #include <string>
 #include "AnimalCard.h"
+#include "NoSplit.h"
 
 class Table
 {
@@ -14,7 +15,7 @@ public:
 	bool win(std::string&);
 
 private:
-	std::shared_ptr<AnimalCard> bob[];
+	std::shared_ptr<AnimalCard> tableau[][];
 
 };
 

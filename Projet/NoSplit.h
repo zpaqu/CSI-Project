@@ -4,9 +4,9 @@
 class NoSplit : public AnimalCard
 {
 public:
-	NoSplit();
+	NoSplit(char a);
 	~NoSplit();
-
+	
 private:
 
 };
