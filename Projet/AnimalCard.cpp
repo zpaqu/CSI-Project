@@ -12,7 +12,15 @@ AnimalCard::~AnimalCard()
 
 void AnimalCard::setOrientation(Orientation o)
 {
-	orient = o;
+	if (orient != o) {
+		char temp0 = animals[0];
+		char temp1 = animals[1];
+		animals[0] = animals[3];
+		animals[1] = animals[2];
+		animals[3] = temp0;
+		animals[4] = temp1;
+		orient = o;
+	}
 	return;
 }
 
