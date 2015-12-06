@@ -10,8 +10,7 @@
 class Table
 {
 public:
-	std::shared_ptr<AnimalCard> tableau[][];
-
+	std::shared_ptr<AnimalCard> ** tableau;
 	Table();
 	~Table();
 	int addAt(std::shared_ptr<AnimalCard>, int, int);

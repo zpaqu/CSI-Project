@@ -4,7 +4,7 @@
 Table::Table()
 {
 	tableau[103][103];
-	std::shared_ptr<AnimalCard> start = new StartCard();
+	std::shared_ptr<AnimalCard> start(new StartCard());
 	addAt(start, 52, 52);
 }
 
@@ -17,7 +17,7 @@ int Table::addAt(std::shared_ptr<AnimalCard> card, int x, int y)
 {
 	try
 	{
-		if (/*tableau[x][y]==goodplacement*/)
+		if (true)
 		{
 			tableau[x][y] = card;
 		}
@@ -28,7 +28,7 @@ int Table::addAt(std::shared_ptr<AnimalCard> card, int x, int y)
 	}
 	catch (int e)
 	{
-		std::cout << "Illegal Argument" << std::endl;
+		std::cout << "Illegal Argument" << std::endl; //Should be illegal placement FIX THIS!!!!!
 	}
 
 	return tableau[x][y].animalNumber;
