@@ -4,7 +4,7 @@
 class SplitFour : public AnimalCard
 {
 public:
-	SplitFour();
+	SplitFour(char a, char b, char c, char d);
 	~SplitFour();
 
 private:
