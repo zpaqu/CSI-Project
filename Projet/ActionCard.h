@@ -26,7 +26,7 @@ class ActionCard : public NoSplit
 {
 public:
 	action act;
-	ActionCard(char a);
+	ActionCard(action a);
 	~ActionCard();
 	virtual QueryResult query();
 	virtual void perform(Table&, Player*, QueryResult);
