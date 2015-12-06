@@ -1,4 +1,5 @@
 #include <string>
+#include "Hand.h"
 
 class Player
 {
@@ -12,6 +13,5 @@ public:
 private:
 	std::string name;
 	std::string sAnimal;
-	//Je sais pas comment ajouter sa main live...
-
+	Hand playerHand;
 };

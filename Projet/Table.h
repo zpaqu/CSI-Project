@@ -18,9 +18,14 @@ public:
 	std::shared_ptr<AnimalCard> pickAt(int, int);
 	std::shared_ptr<AnimalCard> get(int, int);
 	bool win(std::string&);
+	std::shared_ptr<AnimalCard> tableau[][];
+
 
 private:
+<<<<<<< HEAD
 	
+=======
+>>>>>>> origin/master
 
 };
 

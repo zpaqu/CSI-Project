@@ -27,11 +27,11 @@ void AnimalCard::printRow(EvenOdd e)
 {
 	setRow(e);
 	if (row == Odd) {
-		std::cout << animals[0] << animals[1];
+		std::cout << animals[0] << animals[1]<<" ";
 
 	}
-	if (row == even) {
-		std::cout << animals[3] << animals[4];
+	if (row == Even) {
+		std::cout << animals[3] << animals[4]<<" ";
 	}
 	return;
 }
