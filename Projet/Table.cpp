@@ -1,10 +1,11 @@
 #include "Table.h"
 
+
 Table::Table()
 {
 	tableau = new std::shared_ptr<AnimalCard>[103][103];
-	NoSplit *startStack = new NoSplit("*");
-	addAt(startStack, 52, 52);
+	std::shared_ptr<AnimalCard> start = new StartCard();
+	addAt(start, 52, 52);
 }
 
 Table::~Table()

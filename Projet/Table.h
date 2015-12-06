@@ -3,6 +3,7 @@
 #include <string>
 #include "AnimalCard.h"
 #include "NoSplit.h"
+#include "StartCard.h"
 
 class Table
 {
