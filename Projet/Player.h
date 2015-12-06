@@ -17,8 +17,7 @@ public:
 	~Player();
 	std::string swapSecretAnimal(std::string&);
 	std::string getSecretAnimal();
-	//Methode d'affiche d'etat aussi...
-
+	void print();
 private:
 	std::string name;
 	std::string sAnimal;

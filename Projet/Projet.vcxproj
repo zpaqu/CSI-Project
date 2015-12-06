@@ -148,6 +148,7 @@
   <ItemGroup>
     <ClCompile Include="ActionCard.cpp" />
     <ClCompile Include="AnimalCard.cpp" />
+    <ClCompile Include="AnimalCardFactory.cpp" />
     <ClCompile Include="BearAction.cpp" />
     <ClCompile Include="Deck.cpp" />
     <ClCompile Include="DeerAction.cpp" />
@@ -167,6 +168,7 @@
   <ItemGroup>
     <ClInclude Include="ActionCard.h" />
     <ClInclude Include="AnimalCard.h" />
+    <ClInclude Include="AnimalCardFactory.h" />
     <ClInclude Include="BearAction.h" />
     <ClInclude Include="Deck.h" />
     <ClInclude Include="DeerAction.h" />
