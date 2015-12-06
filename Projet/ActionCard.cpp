@@ -103,5 +103,5 @@ QueryResult::QueryResult()
 
 QueryResult::~QueryResult()
 {
-	play.delete;
+	delete play;
 }

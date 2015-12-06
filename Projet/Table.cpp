@@ -3,25 +3,35 @@
 
 Table::Table()
 {
-	tableau = new std::shared_ptr<AnimalCard>[103][103];
+	tableau[103][103];
 	std::shared_ptr<AnimalCard> start = new StartCard();
 	addAt(start, 52, 52);
 }
 
 Table::~Table()
 {
-	tableau.delete[][];
+	delete[] tableau;
 }
 
 int Table::addAt(std::shared_ptr<AnimalCard> card, int x, int y)
 {
-	if(/*tableau[x][y]==goodplacement*/)
-		tableau[x][y] = card;
-	else {
-		throw IllegalPlacement;
+	try
+	{
+		if (/*tableau[x][y]==goodplacement*/)
+		{
+			tableau[x][y] = card;
+		}
+		else 
+		{
+			throw 1;
+		}
+	}
+	catch (int e)
+	{
+		std::cout << "Illegal Argument" << std::endl;
 	}
 
-	return *card.animalNumber;
+	return tableau[x][y].animalNumber;
 
 
 
@@ -30,7 +40,7 @@ int Table::addAt(std::shared_ptr<AnimalCard> card, int x, int y)
 std::shared_ptr<AnimalCard> Table::pickAt(int x, int y)
 {
 	if (tableau[x][y] == nullptr) {
-		return null;
+		return nullptr;
 	}
 	else {
 		std::shared_ptr<AnimalCard> temp = tableau[x][y];
@@ -42,7 +52,7 @@ std::shared_ptr<AnimalCard> Table::pickAt(int x, int y)
 std::shared_ptr<AnimalCard> Table::get(int x, int y)
 {
 	if (tableau[x][y] == nullptr) {
-		return null;
+		return nullptr;
 	}
 	else {
 		return tableau[x][y];

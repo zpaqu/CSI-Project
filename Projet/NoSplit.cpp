@@ -14,5 +14,5 @@ NoSplit::NoSplit(char a)
 
 NoSplit::~NoSplit()
 {
-	animals.delete[];
+	delete[] animals;
 }

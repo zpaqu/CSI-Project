@@ -1,13 +1,17 @@
 #pragma once
 #include <memory> 
 #include <string>
+#include <iostream>
 #include "AnimalCard.h"
 #include "NoSplit.h"
 #include "StartCard.h"
 
+
 class Table
 {
 public:
+	std::shared_ptr<AnimalCard> tableau[][];
+
 	Table();
 	~Table();
 	int addAt(std::shared_ptr<AnimalCard>, int, int);
@@ -16,7 +20,7 @@ public:
 	bool win(std::string&);
 
 private:
-	std::shared_ptr<AnimalCard> tableau[][];
+	
 
 };
 

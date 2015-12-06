@@ -17,5 +17,5 @@ SplitFour::SplitFour(char a, char b, char c, char d)
 
 SplitFour::~SplitFour()
 {
-
+	
 }
