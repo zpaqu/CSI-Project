@@ -17,7 +17,7 @@ int Table::addAt(std::shared_ptr<AnimalCard> card, int x, int y)
 {
 	try
 	{
-		if (true)
+		if (validPosition(card, x, y))
 		{
 			tableau[x][y] = card;
 		}
@@ -30,11 +30,7 @@ int Table::addAt(std::shared_ptr<AnimalCard> card, int x, int y)
 	{
 		std::cout << "Illegal Argument" << std::endl; //Should be illegal placement FIX THIS!!!!!
 	}
-
-	return tableau[x][y].animalNumber;
-
-
-
+	return tableau[x][y]->animalNumber;
 }
 
 std::shared_ptr<AnimalCard> Table::pickAt(int x, int y)
@@ -62,17 +58,92 @@ std::shared_ptr<AnimalCard> Table::get(int x, int y)
 bool Table::win(std::string& animal)
 {
 	int count = 0;
+	char a; 
+	if (animal == "")
+	{
+
+	}
+	else if (animal == "")
+	{
+
+	}
+	else if (animal == "")
+	{
+
+	}
+	else if (animal == "")
+	{
+
+	}
+	else
+	{
+
+	}
 	for (int x = 0; x < 103; x++) {
 		for (int y = 0; y < 103; y++) {
-			if (tableau[x][y].compare(animal)) {
+			if (compare(tableau[x][y], a)) {
 				count++;
 			}
 		}
 	}
-	if (count >= 12) {
+	if (count >= 12) 
+	{
 		return true;
 	}
 	else
+	{
 		return false;
+	}
+}
 
+bool Table::validPosition(std::shared_ptr<AnimalCard> card, int x, int y)
+{
+	if (tableau[x][y] == nullptr)
+	{
+		//Joker and Start Card
+		if ((x > 0 && y >= 0 && x < 103 && y < 103 && tableau[x - 1][y]->animals[0] == 'j' && tableau[x - 1][y]->animals[0] == 'c')
+			|| (x >= 0 && y > 0 && x < 103 && y < 103 && tableau[x][y - 1]->animals[0] == 'j' && tableau[x][y - 1]->animals[0] == 'c')
+			|| (x >= 0 && y >= 0 && x < 102 && y < 103 && tableau[x + 1][y]->animals[0] == 'j' && tableau[x + 1][y]->animals[0] == 'c')
+			|| (x >= 0 && y >= 0 && x < 103 && y < 102 && tableau[x][y + 1]->animals[0] == 'j' && tableau[x][y + 1]->animals[0] == 'c'))
+		{
+			return true; 
+		}
+		//Animal Cards
+		else if (x > 0 && y > 0 && x < 103 && y < 103 && (card->animals[0] == tableau[x - 1][y]->animals[2] || card->animals[0] == tableau[x][y - 1]->animals[1]))
+		{
+			return true;
+		}
+		else if (x > 0 && y >= 0 && x < 103 && y < 102 && (card->animals[1] == tableau[x - 1][y]->animals[3] || card->animals[1] == tableau[x][y + 1]->animals[0]))
+		{
+			return true;
+		}
+		else if (x >= 0 && y > 0 && x < 102 && y < 103 && (card->animals[2] == tableau[x][y - 1]->animals[3] || card->animals[2] == tableau[x + 1][y]->animals[0]))
+		{
+			return true;
+		}
+		else if (x >= 0 && y >= 0 && x < 102 && y < 102 && (card->animals[3] == tableau[x + 1][y]->animals[1] || card->animals[3] == tableau[x][y + 1]->animals[2]))
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+	else
+	{
+		return false;
+	}
+}
+
+bool Table::compare(std::shared_ptr<AnimalCard> card, char a)
+{
+	if (card->animals[0] == a || card->animals[1] == a || card->animals[2] == a || card->animals[3] == a)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
 }
