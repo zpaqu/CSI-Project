@@ -7,7 +7,7 @@ AnimalCard::AnimalCard()
 	
 AnimalCard::~AnimalCard()
 {
-
+	delete[] animals;
 }
 
 void AnimalCard::setOrientation(Orientation o)
