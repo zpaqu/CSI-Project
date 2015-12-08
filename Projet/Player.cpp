@@ -51,9 +51,17 @@ std::string Player::swapSecretAnimal(std::string& a)
 	std::string temp = a;
 	a = sAnimal;
 	sAnimal = temp;
+	return sAnimal;
 }
 
 std::string Player::getSecretAnimal()
 {
+	return sAnimal;
 
+}
+
+void Player::print()
+{
+	std::cout << "nom:" << name << "animal secret" << sAnimal << "main:";
+	playerHand.print();
 }
