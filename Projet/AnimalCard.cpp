@@ -1,13 +1,19 @@
 #include "AnimalCard.h"
 	
-AnimalCard::AnimalCard()
+AnimalCard::AnimalCard(char a, char b, char c, char d)
 {
-
+	animals[0] = a;
+	animals[1] = b;
+	animals[2] = c;
+	animals[3] = d;
 }
 	
 AnimalCard::~AnimalCard()
 {
+<<<<<<< HEAD
 	delete[] animals;
+=======
+>>>>>>> origin/master
 }
 
 void AnimalCard::setOrientation(Orientation o)

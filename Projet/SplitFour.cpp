@@ -1,18 +1,9 @@
 #include "SplitFour.h"
 
-SplitFour::SplitFour()
-{
 
-}
-
-SplitFour::SplitFour(char a, char b, char c, char d)
+SplitFour::SplitFour(char a, char b, char c, char d) : AnimalCard(a,b,c,d)
 {
 	animalNumber = 4;
-	animals[0] = a;
-	animals[1] = b;
-	animals[2] = c;
-	animals[3] = d;
-
 }
 
 SplitFour::~SplitFour()

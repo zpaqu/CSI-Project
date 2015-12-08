@@ -1,11 +1,10 @@
 #include "WolfAction.h"
 
-WolfAction::WolfAction()
+WolfAction::WolfAction() : ActionCard('W')
 {
 
 }
 
 WolfAction::~WolfAction()
 {
-
 }

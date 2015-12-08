@@ -1,36 +1,12 @@
 #pragma once
 #include "ActionCard.h"
 
-ActionCard::ActionCard(action acti)
+ActionCard::ActionCard(char c) : NoSplit(c)
 {
-	char a;
-	act = acti;
-	if (acti == Bear) {
-		a = 'B';
-	}
-	if (acti == Deer) {
-		a = 'D';
-	}
-	if (acti == Hare) {
-		a = 'H';
-	}
-	if (acti == Moose) {
-		a = 'M';
-	}
-	if (acti == Wolf) {
-		a = 'W';
-	}
-	animalNumber = 1;
-	animals[0] = a;
-	animals[1] = a;
-	animals[2] = a;
-	animals[3] = a;
-
 }
 
 ActionCard::~ActionCard()
 {
-
 }
 
 QueryResult ActionCard::query()

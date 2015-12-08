@@ -12,7 +12,7 @@ public:
 	char* animals= new char[4];
 	Orientation orient = Up;
 	EvenOdd row = Odd;
-	AnimalCard();
+	AnimalCard(char,char,char,char);
 	~AnimalCard();
 	virtual void setOrientation(Orientation);
 	virtual void setRow(EvenOdd);
