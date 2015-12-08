@@ -18,7 +18,7 @@ public:
 	std::shared_ptr<AnimalCard> get(int, int);
 	bool win(std::string&);
 	bool validPosition(std::shared_ptr<AnimalCard>, int, int);
-	bool compare(std::shared_ptr<AnimalCard>, char);
+	int compare(std::shared_ptr<AnimalCard>, char);
 
 private:
 

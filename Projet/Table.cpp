@@ -59,31 +59,34 @@ bool Table::win(std::string& animal)
 {
 	int count = 0;
 	char a; 
-	if (animal == "")
+	if (animal == "Bear")
 	{
-
+		a = 'b';
 	}
-	else if (animal == "")
+	else if (animal == "Deer")
 	{
-
+		a = 'd';
 	}
-	else if (animal == "")
+	else if (animal == "Hare")
 	{
-
+		a = 'h';
 	}
-	else if (animal == "")
+	else if (animal == "Moose")
 	{
-
+		a = 'm';
+	}
+	else if (animal == "Wolf")
+	{
+		a = 'w';
 	}
 	else
 	{
-
+		return false; 
 	}
+
 	for (int x = 0; x < 103; x++) {
 		for (int y = 0; y < 103; y++) {
-			if (compare(tableau[x][y], a)) {
-				count++;
-			}
+			count += compare(tableau[x][y], a);
 		}
 	}
 	if (count >= 12) 
@@ -136,14 +139,14 @@ bool Table::validPosition(std::shared_ptr<AnimalCard> card, int x, int y)
 	}
 }
 
-bool Table::compare(std::shared_ptr<AnimalCard> card, char a)
+int Table::compare(std::shared_ptr<AnimalCard> card, char a)
 {
 	if (card->animals[0] == a || card->animals[1] == a || card->animals[2] == a || card->animals[3] == a)
 	{
-		return true;
+		return 1;
 	}
 	else
 	{
-		return false;
+		return 0;
 	}
 }
