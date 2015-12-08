@@ -1,7 +1,8 @@
 #include "SplitThree.h"
 
-SplitThree::SplitThree(char a, char b, char c) : AnimalCard(a,a,b,c)
+SplitThree::SplitThree(char a, char b, char c, bool x) : AnimalCard(a,a,b,c)
 {
+
 	animalNumber = 3;
 }
 
