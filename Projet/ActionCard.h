@@ -5,7 +5,19 @@
 #include <iostream>
 
 //Dont know what to do with wuery result yet...
-enum action { Bear,Deer,Hare,Moose,Wolf};
+enum action {Bear,Deer,Hare,Moose,Wolf};
+
+class ActionCard : public NoSplit
+{
+public:
+	action act;
+	ActionCard(char);
+	~ActionCard();
+	virtual QueryResult query();
+	virtual void perform(Table&, Player*, QueryResult);
+private:
+
+};
 
 class QueryResult
 {
@@ -13,7 +25,6 @@ public:
 	Player* play;
 	//variable de position de la carte a prendre
 	//variable de la position ou mettre la carte
-	
 	QueryResult();
 	~QueryResult();
 
@@ -22,15 +33,5 @@ private:
 };
 
 
-class ActionCard : public NoSplit
-{
-public:
-	action act;
-	ActionCard(action a);
-	~ActionCard();
-	virtual QueryResult query();
-	virtual void perform(Table&, Player*, QueryResult);
-private:
 
-};
 

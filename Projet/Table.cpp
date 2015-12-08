@@ -104,10 +104,10 @@ bool Table::validPosition(std::shared_ptr<AnimalCard> card, int x, int y)
 	if (tableau[x][y] == nullptr)
 	{
 		//Joker and Start Card
-		if ((x > 0 && y >= 0 && x < 103 && y < 103 && tableau[x - 1][y]->animals[0] == 'j' && tableau[x - 1][y]->animals[0] == 'c')
-			|| (x >= 0 && y > 0 && x < 103 && y < 103 && tableau[x][y - 1]->animals[0] == 'j' && tableau[x][y - 1]->animals[0] == 'c')
-			|| (x >= 0 && y >= 0 && x < 102 && y < 103 && tableau[x + 1][y]->animals[0] == 'j' && tableau[x + 1][y]->animals[0] == 'c')
-			|| (x >= 0 && y >= 0 && x < 103 && y < 102 && tableau[x][y + 1]->animals[0] == 'j' && tableau[x][y + 1]->animals[0] == 'c'))
+		if ((x > 0 && y >= 0 && x < 103 && y < 103 && (tableau[x - 1][y]->animals[0] == 'j' || tableau[x - 1][y]->animals[0] == 'c'))
+			|| (x >= 0 && y > 0 && x < 103 && y < 103 && (tableau[x][y - 1]->animals[0] == 'j' || tableau[x][y - 1]->animals[0] == 'c'))
+			|| (x >= 0 && y >= 0 && x < 102 && y < 103 && (tableau[x + 1][y]->animals[0] == 'j' || tableau[x + 1][y]->animals[0] == 'c'))
+			|| (x >= 0 && y >= 0 && x < 103 && y < 102 && (tableau[x][y + 1]->animals[0] == 'j' || tableau[x][y + 1]->animals[0] == 'c')))
 		{
 			return true; 
 		}

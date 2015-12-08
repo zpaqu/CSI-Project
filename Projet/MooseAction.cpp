@@ -1,11 +1,10 @@
 #include "MooseAction.h"
 
-MooseAction::MooseAction()
+MooseAction::MooseAction() : ActionCard('M')
 {
 
 }
 
 MooseAction::~MooseAction()
 {
-
 }
