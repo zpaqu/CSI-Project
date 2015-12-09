@@ -19,7 +19,7 @@ int main() {
 		std::cout << "entrer le nombre de joueurs" << std::endl;
 		std::cin >> numJ;
 	}
-	Player* play[numJ - 1];
+	Player* play[5];
 	Player p1(1);
 	play[0] = p1;
 	activeHand = &play[0].getHand();
@@ -61,11 +61,12 @@ int main() {
 	}
 
 
+	bool won = false;
 
-
-	while (!winner()) {
+	while (!won) {
 		//can save the game here
 		for (int i = 0; i < numJ; i++) {
+			if(!won){
 			bool cardPlacedLegaly = false;
 			t.print();
 			activeHand = &(play[i].getHand());//not sure if that makes sence (the & placement)
@@ -73,19 +74,19 @@ int main() {
 			play[i].print;
 			while (!cardPlacedLegaly)
 			{
-				int cardNumber = -1;
-				while (cardNumber<0 || cardNumber> activeHand.size()) {
-					std::cout << "quel carte voulez vous selectionner (entre 0 et " << activeHand.size() << ")" << endl;
-					std::cin >> cardNumber;
+				int cardN = -1;
+				while (cardNr<0 || cardN> activeHand.cardNumber) {
+					std::cout << "quel carte voulez vous selectionner (entre 0 et " << activeHand.cardNumber << ")" << endl;
+					std::cin >> cardN;
 				}
-				std::shared_ptr<AnimalCard> activeCard = activeHand[cardNumber];
-				if (activeCard.isActionCard) {
+				std::shared_ptr<AnimalCard> activeCard = activeHand[cardN];
+				if (activeCard.animals[0] >= 'A' && activeCard.animals[0] <= 'Z') {
 					//do whatever action cards do
 					cardPlacedLegaly = true;
 				}
 				else {
 					int option = 0;
-					while (option != 1 && option!=3) {
+					while (option != 1 && option != 3) {
 						activeCard.print();
 						std::cout << "choisir un option (1-3)" << endl << "option1: placer la carte sur la table" << endl;
 						std::cout << "Option2: tournez la carte de 180 degre" << endl << "option3: passer votre tour" << endl;
@@ -94,7 +95,7 @@ int main() {
 						}
 					}
 					if (option == 1) {
-					
+
 						int x = -1;
 						while (x < 0 || x>103) {
 							std::cout << "veuillez entrer la position x ou vous voulez placer la carte" << endl;
@@ -111,7 +112,7 @@ int main() {
 							cardPlacedLegaly = true;
 
 						}
-						catch(){
+						catch () {
 							std::cout << "le placement na pas fonctionner" << endl;
 						}
 
@@ -120,9 +121,13 @@ int main() {
 						//le joueur a decider de passer son tour
 						cardPlacedLegaly = true;
 					}
-					
-					//should check for winner here i think
+
+					for (int j = 0; j < numJ; j++) {
+						won=t.won(play[j].getSecretAnimal());
+					}
+
 				}
+			}
 
 			}
 			
