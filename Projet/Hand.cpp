@@ -1,10 +1,10 @@
 #include "Hand.h"
+#include <list>
 
 
 template<class C, class Allocator = std::allocator<C>>
 Hand::Hand()
 {
-	myHand= new std::shared_ptr<AnimalCard>[50];
 	cardNumber = 0;
 	
 }
@@ -18,21 +18,22 @@ Hand::~Hand()
 template<class C, class Allocator = std::allocator<C>>
 Hand& Hand::operator+=(std::shared_ptr<AnimalCard> param)
 {
-	myHand[cardNumber] = param;
+	myHand.insert(param);
 	cardNumber++;
 }
 
 template<class C, class Allocator = std::allocator<C>>
 Hand& Hand::operator-=(std::shared_ptr<AnimalCard> param)
 {
+	myHand.remove(param);
 	cardNumber--;
-	myHand[cardNumber] = nullptr;
 }
 
 template<class C, class Allocator = std::allocator<C>>
 std::shared_ptr<AnimalCard> Hand::operator[] (int param)
 {
-	return myHand[param];
+	std::list<std::shared_ptr<AnimalCard>>::iterator it = std::next(myHand.begin(), param);
+	return it;
 }
 
 template<class C, class Allocator = std::allocator<C>>

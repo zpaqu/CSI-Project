@@ -1,6 +1,7 @@
 #include <vector>
 #include <iostream>
 #include <memory>
+#include "AnimalCard.h"
 
 using namespace std;
 
@@ -11,6 +12,7 @@ public:
 	Deck();
 	~Deck();
 	std::shared_ptr<C> draw();
+	void add(AnimalCard c);
 
 private:
 

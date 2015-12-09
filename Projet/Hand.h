@@ -8,7 +8,7 @@ class Hand
 public:
 	Hand();
 	~Hand();
-	std::shared_ptr<AnimalCard> myHand[];
+	std::list<std::shared_ptr<AnimalCard>> myHand;
 	int cardNumber;
 	Hand& operator+=(std::shared_ptr<AnimalCard>);
 	Hand& operator-=(std::shared_ptr<AnimalCard>);
