@@ -93,6 +93,7 @@ int main() {
 						}
 					}
 					if (option == 1) {
+					
 						int x = -1;
 						while (x < 0 || x>103) {
 							std::cout << "veuillez entrer la position x ou vous voulez placer la carte" << endl;
@@ -109,7 +110,7 @@ int main() {
 							cardPlacedLegaly = true;
 
 						}
-						catch{
+						catch(){
 							std::cout << "le placement na pas fonctionner" << endl;
 						}
 
@@ -118,6 +119,7 @@ int main() {
 						//le joueur a decider de passer son tour
 						cardPlacedLegaly = true;
 					}
+					
 					//should check for winner here i think
 				}
 
