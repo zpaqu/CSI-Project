@@ -152,6 +152,7 @@
     <ClCompile Include="BearAction.cpp" />
     <ClCompile Include="Deck.cpp" />
     <ClCompile Include="DeerAction.cpp" />
+    <ClCompile Include="Game.cpp" />
     <ClCompile Include="Hand.cpp" />
     <ClCompile Include="HareAction.cpp" />
     <ClCompile Include="Joker.cpp" />

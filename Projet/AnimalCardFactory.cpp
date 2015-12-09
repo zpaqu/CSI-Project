@@ -107,7 +107,10 @@ AnimalCardFactory::AnimalCardFactory()
 
 AnimalCardFactory * AnimalCardFactory::getFactory()
 {
-	return nullptr;
+	AnimalCardFactory * fact = new AnimalCardFactory();
+	return fact;
+
+	//dont forget the destructor in whatever will call this
 }
 
 Deck<std::shared_ptr<AnimalCard>> AnimalCardFactory::getDeck()
