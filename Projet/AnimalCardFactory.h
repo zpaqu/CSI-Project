@@ -9,10 +9,10 @@
 class AnimalCardFactory
 {
 public:
-	Deck<std::shared_ptr<AnimalCard>> myDeck;
+	Deck<AnimalCard> myDeck;
 	AnimalCardFactory();
 	static AnimalCardFactory* getFactory();
-	Deck<std::shared_ptr<AnimalCard>> getDeck();
+	Deck<AnimalCard> getDeck();
 	~AnimalCardFactory();
 };
 
