@@ -1,8 +1,8 @@
 #include "Player.h"
 
-Player::Player()
+Player::Player(int pn)
 {
-	num = 1; 
+	num = pn; 
 	//Player number!!!
 	std::cout << "Quel est le nom du joueur";
 	std::cin >> name;

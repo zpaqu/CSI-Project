@@ -10,8 +10,9 @@
 class Table
 {
 public:
+	int numPlayers;
 	std::shared_ptr<AnimalCard> ** tableau;
-	Table();
+	Table(int a);
 	~Table();
 	int addAt(std::shared_ptr<AnimalCard>, int, int);
 	std::shared_ptr<AnimalCard> pickAt(int, int);
@@ -19,6 +20,7 @@ public:
 	bool win(std::string&);
 	bool validPosition(std::shared_ptr<AnimalCard>, int, int);
 	int compare(std::shared_ptr<AnimalCard>, char);
+	void print();
 
 private:
 

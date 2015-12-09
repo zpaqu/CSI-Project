@@ -1,8 +1,9 @@
 #include "Table.h"
 #include "Exception.h"
 
-Table::Table()
+Table::Table(int players)
 {
+	numPlayers = players;
 	tableau[103][103];
 	std::shared_ptr<AnimalCard> start(new StartCard());
 	addAt(start, 52, 52);
@@ -142,5 +143,19 @@ int Table::compare(std::shared_ptr<AnimalCard> card, char a)
 	else
 	{
 		return 0;
+	}
+}
+
+void Table::print()
+{
+	for (int x = 0; x < 103; x++) {
+		if(x<10)
+			std::cout << "0";
+		if (x<10)
+			std::cout << "0";
+		std::cout << "x";
+		for (int y = 0; y < 103; y++) {
+
+		}
 	}
 }

@@ -19,45 +19,45 @@ int main() {
 		std::cout << "entrer le nombre de joueurs" << std::endl;
 		std::cin >> numJ;
 	}
-	Player* play = new Player[numJ - 1];
-	Player p1();
+	Player* play[numJ - 1];
+	Player p1(1);
 	play[0] = p1;
-	activeHand = play[0].getHand();
+	activeHand = &play[0].getHand();
 	activeHand += myDeck.draw();
-	activeHand += myDeck.draw;
-	activeHand += myDeck.draw;
+	activeHand += myDeck.draw();
+	activeHand += myDeck.draw();
 
-	Player p2();
+	Player p2(2);
 	play[1] = p2;
-	activeHand = play[1].getHand();
-	activeHand += myDeck.draw;
-	activeHand += myDeck.draw;
-	activeHand += myDeck.draw;
+	activeHand = &play[1].getHand();
+	activeHand += myDeck.draw();
+	activeHand += myDeck.draw();
+	activeHand += myDeck.draw();
 	if (numJ >= 3) {
-		Player p3();
+		Player p3(3);
 		play[2] = p3;
-		activeHand = play[2].getHand();
-		activeHand += myDeck.draw;
-		activeHand += myDeck.draw;
-		activeHand += myDeck.draw;
+		activeHand = &play[2].getHand();
+		activeHand += myDeck.draw();
+		activeHand += myDeck.draw();
+		activeHand += myDeck.draw();
 	}
 
 	if (numJ >= 4) {
-		Player p4();
+		Player p4(4);
 		play[3] = p4;
-		activeHand = play[3].getHand();
-		activeHand += myDeck.draw;
-		activeHand += myDeck.draw;
-		activeHand += myDeck.draw;
+		activeHand = &play[3].getHand();
+		activeHand += myDeck.draw();
+		activeHand += myDeck.draw();
+		activeHand += myDeck.draw();
 	}
 
 	if (numJ >= 5) {
-		Player p5();
+		Player p5(5);
 		play[4] = p5;
-		activeHand = play[4].getHand();
-		activeHand += myDeck.draw;
-		activeHand += myDeck.draw;
-		activeHand += myDeck.draw;
+		activeHand = &play[4].getHand();
+		activeHand += myDeck.draw();
+		activeHand += myDeck.draw();
+		activeHand += myDeck.draw();
 	}
 
 
@@ -68,8 +68,8 @@ int main() {
 		for (int i = 0; i < numJ; i++) {
 			bool cardPlacedLegaly = false;
 			t.print();
-			activeHand = play[i].getHand();
-			activeHand += myDeck.draw;
+			activeHand = &(play[i].getHand());//not sure if that makes sence (the & placement)
+			activeHand += myDeck.draw();
 			play[i].print;
 			while (!cardPlacedLegaly)
 			{

@@ -13,7 +13,7 @@ class Player
 {
 public:
 	 
-	Player();
+	Player(int pn);
 	~Player();
 	Hand getHand();
 	std::string swapSecretAnimal(std::string&);
