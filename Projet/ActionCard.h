@@ -22,9 +22,9 @@ private:
 class QueryResult
 {
 public:
-	Player* play;
-	//variable de position de la carte a prendre
-	//variable de la position ou mettre la carte
+	int playerNum; 
+	int cX, cY, rX, rY; //Coordonnee X, Y et Resultat X, Y
+
 	QueryResult();
 	~QueryResult();
 

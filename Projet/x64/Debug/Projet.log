@@ -1,76 +1,73 @@
-﻿Build started 12/6/2015 4:21:38 PM.
+﻿Build started 12/9/2015 12:13:35 AM.
      1>Project "C:\Users\Zachary\Documents\GitHub\CSI-Project\Projet\Projet.vcxproj" on node 2 (Rebuild target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"x64\Debug\\" /Fd"x64\Debug\vc140.pdb" /Gd /TP /errorReport:prompt ActionCard.cpp AnimalCard.cpp BearAction.cpp Deck.cpp DeerAction.cpp Hand.cpp HareAction.cpp Joker.cpp MooseAction.cpp NoSplit.cpp Player.cpp SplitFour.cpp SplitThree.cpp SplitTwo.cpp StartCard.cpp Table.cpp WolfAction.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"x64\Debug\\" /Fd"x64\Debug\vc140.pdb" /Gd /TP /errorReport:prompt ActionCard.cpp AnimalCard.cpp AnimalCardFactory.cpp BearAction.cpp Deck.cpp DeerAction.cpp Hand.cpp HareAction.cpp Joker.cpp MooseAction.cpp NoSplit.cpp Player.cpp SplitFour.cpp SplitThree.cpp SplitTwo.cpp StartCard.cpp Table.cpp WolfAction.cpp
          WolfAction.cpp
      1>c:\users\zachary\documents\github\csi-project\projet\player.h(25): error C2955: 'Hand': use of class template requires template argument list
          c:\users\zachary\documents\github\csi-project\projet\hand.h(7): note: see declaration of 'Hand'
-     1>c:\users\zachary\documents\github\csi-project\projet\wolfaction.cpp(4): error C2512: 'ActionCard': no appropriate default constructor available
-         c:\users\zachary\documents\github\csi-project\projet\actioncard.h(25): note: see declaration of 'ActionCard'
+     1>c:\users\zachary\documents\github\csi-project\projet\actioncard.h(16): error C3646: 'query': unknown override specifier
+     1>c:\users\zachary\documents\github\csi-project\projet\actioncard.h(16): error C2059: syntax error: ')'
+     1>c:\users\zachary\documents\github\csi-project\projet\actioncard.h(16): error C2238: unexpected token(s) preceding ';'
+     1>c:\users\zachary\documents\github\csi-project\projet\actioncard.h(17): error C2061: syntax error: identifier 'QueryResult'
          Table.cpp
-     1>c:\users\zachary\documents\github\csi-project\projet\table.cpp(34): error C2065: 'animalNumber': undeclared identifier
-     1>c:\users\zachary\documents\github\csi-project\projet\table.cpp(64): error C2039: 'compare': is not a member of 'std::shared_ptr<AnimalCard>'
          StartCard.cpp
-     1>c:\users\zachary\documents\github\csi-project\projet\startcard.cpp(5): error C2512: 'NoSplit': no appropriate default constructor available
-         c:\users\zachary\documents\github\csi-project\projet\nosplit.h(4): note: see declaration of 'NoSplit'
          SplitTwo.cpp
-     1>c:\users\zachary\documents\github\csi-project\projet\splittwo.cpp(4): error C2511: 'SplitTwo::SplitTwo(void)': overloaded member function not found in 'SplitTwo'
-         c:\users\zachary\documents\github\csi-project\projet\splittwo.h(4): note: see declaration of 'SplitTwo'
          SplitThree.cpp
-     1>c:\users\zachary\documents\github\csi-project\projet\splitthree.cpp(4): error C2511: 'SplitThree::SplitThree(void)': overloaded member function not found in 'SplitThree'
-         c:\users\zachary\documents\github\csi-project\projet\splitthree.h(4): note: see declaration of 'SplitThree'
          SplitFour.cpp
-     1>c:\users\zachary\documents\github\csi-project\projet\splitfour.cpp(4): error C2511: 'SplitFour::SplitFour(void)': overloaded member function not found in 'SplitFour'
-         c:\users\zachary\documents\github\csi-project\projet\splitfour.h(4): note: see declaration of 'SplitFour'
          Player.cpp
      1>c:\users\zachary\documents\github\csi-project\projet\player.h(25): error C2955: 'Hand': use of class template requires template argument list
          c:\users\zachary\documents\github\csi-project\projet\hand.h(7): note: see declaration of 'Hand'
      1>c:\users\zachary\documents\github\csi-project\projet\player.cpp(4): error C2512: 'Hand': no appropriate default constructor available
          c:\users\zachary\documents\github\csi-project\projet\hand.h(7): note: see declaration of 'Hand'
-     1>c:\users\zachary\documents\github\csi-project\projet\player.cpp(7): error C2064: term does not evaluate to a function taking 0 arguments
+     1>c:\users\zachary\documents\github\csi-project\projet\player.cpp(9): error C2064: term does not evaluate to a function taking 0 arguments
+     1>c:\users\zachary\documents\github\csi-project\projet\player.cpp(68): error C2662: 'void Hand<C,Allocator>::print(void)': cannot convert 'this' pointer from 'Hand' to 'Hand<C,Allocator> &'
+         c:\users\zachary\documents\github\csi-project\projet\player.cpp(68): note: Reason: cannot convert from 'Hand' to 'Hand<C,Allocator>'
+         c:\users\zachary\documents\github\csi-project\projet\player.cpp(68): note: Conversion requires a second user-defined-conversion operator or constructor
          NoSplit.cpp
          MooseAction.cpp
      1>c:\users\zachary\documents\github\csi-project\projet\player.h(25): error C2955: 'Hand': use of class template requires template argument list
          c:\users\zachary\documents\github\csi-project\projet\hand.h(7): note: see declaration of 'Hand'
-     1>c:\users\zachary\documents\github\csi-project\projet\mooseaction.cpp(4): error C2512: 'ActionCard': no appropriate default constructor available
-         c:\users\zachary\documents\github\csi-project\projet\actioncard.h(25): note: see declaration of 'ActionCard'
+     1>c:\users\zachary\documents\github\csi-project\projet\actioncard.h(16): error C3646: 'query': unknown override specifier
+     1>c:\users\zachary\documents\github\csi-project\projet\actioncard.h(16): error C2059: syntax error: ')'
+     1>c:\users\zachary\documents\github\csi-project\projet\actioncard.h(16): error C2238: unexpected token(s) preceding ';'
+     1>c:\users\zachary\documents\github\csi-project\projet\actioncard.h(17): error C2061: syntax error: identifier 'QueryResult'
          Joker.cpp
-     1>c:\users\zachary\documents\github\csi-project\projet\joker.cpp(4): error C2512: 'NoSplit': no appropriate default constructor available
-         c:\users\zachary\documents\github\csi-project\projet\nosplit.h(4): note: see declaration of 'NoSplit'
          HareAction.cpp
      1>c:\users\zachary\documents\github\csi-project\projet\player.h(25): error C2955: 'Hand': use of class template requires template argument list
          c:\users\zachary\documents\github\csi-project\projet\hand.h(7): note: see declaration of 'Hand'
-     1>c:\users\zachary\documents\github\csi-project\projet\hareaction.cpp(4): error C2512: 'ActionCard': no appropriate default constructor available
-         c:\users\zachary\documents\github\csi-project\projet\actioncard.h(25): note: see declaration of 'ActionCard'
+     1>c:\users\zachary\documents\github\csi-project\projet\actioncard.h(16): error C3646: 'query': unknown override specifier
+     1>c:\users\zachary\documents\github\csi-project\projet\actioncard.h(16): error C2059: syntax error: ')'
+     1>c:\users\zachary\documents\github\csi-project\projet\actioncard.h(16): error C2238: unexpected token(s) preceding ';'
+     1>c:\users\zachary\documents\github\csi-project\projet\actioncard.h(17): error C2061: syntax error: identifier 'QueryResult'
          Hand.cpp
-     1>c:\users\zachary\documents\github\csi-project\projet\hand.cpp(5): error C2955: 'Hand': use of class template requires template argument list
+     1>c:\users\zachary\documents\github\csi-project\projet\hand.cpp(6): error C2955: 'Hand': use of class template requires template argument list
          c:\users\zachary\documents\github\csi-project\projet\hand.h(7): note: see declaration of 'Hand'
-     1>c:\users\zachary\documents\github\csi-project\projet\hand.cpp(10): error C2244: 'Hand::Hand': unable to match function definition to an existing declaration
-         c:\users\zachary\documents\github\csi-project\projet\hand.cpp(5): note: see declaration of 'Hand::Hand'
-         c:\users\zachary\documents\github\csi-project\projet\hand.cpp(10): note: definition
-         c:\users\zachary\documents\github\csi-project\projet\hand.cpp(10): note: 'Hand::Hand(void)'
-         c:\users\zachary\documents\github\csi-project\projet\hand.cpp(10): note: existing declarations
-         c:\users\zachary\documents\github\csi-project\projet\hand.cpp(10): note: 'Hand<C,Allocator>::Hand(void)'
-     1>c:\users\zachary\documents\github\csi-project\projet\hand.cpp(16): error C2244: 'Hand::~Hand': unable to match function definition to an existing declaration
-         c:\users\zachary\documents\github\csi-project\projet\hand.cpp(13): note: see declaration of 'Hand::~Hand'
-         c:\users\zachary\documents\github\csi-project\projet\hand.cpp(16): note: definition
-         c:\users\zachary\documents\github\csi-project\projet\hand.cpp(16): note: 'Hand::~Hand(void) noexcept'
-         c:\users\zachary\documents\github\csi-project\projet\hand.cpp(16): note: existing declarations
-         c:\users\zachary\documents\github\csi-project\projet\hand.cpp(16): note: 'Hand<C,Allocator>::~Hand(void)'
-     1>c:\users\zachary\documents\github\csi-project\projet\hand.cpp(23): error C2244: 'Hand::operator +=': unable to match function definition to an existing declaration
-         c:\users\zachary\documents\github\csi-project\projet\hand.cpp(19): note: see declaration of 'Hand::operator +='
-         c:\users\zachary\documents\github\csi-project\projet\hand.cpp(23): note: definition
-         c:\users\zachary\documents\github\csi-project\projet\hand.cpp(23): note: 'Hand &Hand::operator +=(std::shared_ptr<AnimalCard>)'
-         c:\users\zachary\documents\github\csi-project\projet\hand.cpp(23): note: existing declarations
-         c:\users\zachary\documents\github\csi-project\projet\hand.cpp(23): note: 'Hand<C,Allocator> &Hand<C,Allocator>::operator +=(std::shared_ptr<AnimalCard>)'
-     1>c:\users\zachary\documents\github\csi-project\projet\hand.cpp(30): error C2244: 'Hand::operator -=': unable to match function definition to an existing declaration
-         c:\users\zachary\documents\github\csi-project\projet\hand.cpp(26): note: see declaration of 'Hand::operator -='
-         c:\users\zachary\documents\github\csi-project\projet\hand.cpp(30): note: definition
-         c:\users\zachary\documents\github\csi-project\projet\hand.cpp(30): note: 'Hand &Hand::operator -=(std::shared_ptr<AnimalCard>)'
-         c:\users\zachary\documents\github\csi-project\projet\hand.cpp(30): note: existing declarations
-         c:\users\zachary\documents\github\csi-project\projet\hand.cpp(30): note: 'Hand<C,Allocator> &Hand<C,Allocator>::operator -=(std::shared_ptr<AnimalCard>)'
+     1>c:\users\zachary\documents\github\csi-project\projet\hand.cpp(9): error C2244: 'Hand::Hand': unable to match function definition to an existing declaration
+         c:\users\zachary\documents\github\csi-project\projet\hand.cpp(6): note: see declaration of 'Hand::Hand'
+         c:\users\zachary\documents\github\csi-project\projet\hand.cpp(9): note: definition
+         c:\users\zachary\documents\github\csi-project\projet\hand.cpp(9): note: 'Hand::Hand(void)'
+         c:\users\zachary\documents\github\csi-project\projet\hand.cpp(9): note: existing declarations
+         c:\users\zachary\documents\github\csi-project\projet\hand.cpp(9): note: 'Hand<C,Allocator>::Hand(void)'
+     1>c:\users\zachary\documents\github\csi-project\projet\hand.cpp(15): error C2244: 'Hand::~Hand': unable to match function definition to an existing declaration
+         c:\users\zachary\documents\github\csi-project\projet\hand.cpp(12): note: see declaration of 'Hand::~Hand'
+         c:\users\zachary\documents\github\csi-project\projet\hand.cpp(15): note: definition
+         c:\users\zachary\documents\github\csi-project\projet\hand.cpp(15): note: 'Hand::~Hand(void) noexcept'
+         c:\users\zachary\documents\github\csi-project\projet\hand.cpp(15): note: existing declarations
+         c:\users\zachary\documents\github\csi-project\projet\hand.cpp(15): note: 'Hand<C,Allocator>::~Hand(void)'
+     1>c:\users\zachary\documents\github\csi-project\projet\hand.cpp(22): error C2244: 'Hand::operator +=': unable to match function definition to an existing declaration
+         c:\users\zachary\documents\github\csi-project\projet\hand.cpp(18): note: see declaration of 'Hand::operator +='
+         c:\users\zachary\documents\github\csi-project\projet\hand.cpp(22): note: definition
+         c:\users\zachary\documents\github\csi-project\projet\hand.cpp(22): note: 'Hand &Hand::operator +=(std::shared_ptr<AnimalCard>)'
+         c:\users\zachary\documents\github\csi-project\projet\hand.cpp(22): note: existing declarations
+         c:\users\zachary\documents\github\csi-project\projet\hand.cpp(22): note: 'Hand<C,Allocator> &Hand<C,Allocator>::operator +=(std::shared_ptr<AnimalCard>)'
+     1>c:\users\zachary\documents\github\csi-project\projet\hand.cpp(29): error C2244: 'Hand::operator -=': unable to match function definition to an existing declaration
+         c:\users\zachary\documents\github\csi-project\projet\hand.cpp(25): note: see declaration of 'Hand::operator -='
+         c:\users\zachary\documents\github\csi-project\projet\hand.cpp(29): note: definition
+         c:\users\zachary\documents\github\csi-project\projet\hand.cpp(29): note: 'Hand &Hand::operator -=(std::shared_ptr<AnimalCard>)'
+         c:\users\zachary\documents\github\csi-project\projet\hand.cpp(29): note: existing declarations
+         c:\users\zachary\documents\github\csi-project\projet\hand.cpp(29): note: 'Hand<C,Allocator> &Hand<C,Allocator>::operator -=(std::shared_ptr<AnimalCard>)'
      1>c:\users\zachary\documents\github\csi-project\projet\hand.cpp(36): error C2244: 'Hand::operator []': unable to match function definition to an existing declaration
-         c:\users\zachary\documents\github\csi-project\projet\hand.cpp(33): note: see declaration of 'Hand::operator []'
+         c:\users\zachary\documents\github\csi-project\projet\hand.cpp(32): note: see declaration of 'Hand::operator []'
          c:\users\zachary\documents\github\csi-project\projet\hand.cpp(36): note: definition
          c:\users\zachary\documents\github\csi-project\projet\hand.cpp(36): note: 'std::shared_ptr<AnimalCard> Hand::operator [](int)'
          c:\users\zachary\documents\github\csi-project\projet\hand.cpp(36): note: existing declarations
@@ -90,43 +87,72 @@
          DeerAction.cpp
      1>c:\users\zachary\documents\github\csi-project\projet\player.h(25): error C2955: 'Hand': use of class template requires template argument list
          c:\users\zachary\documents\github\csi-project\projet\hand.h(7): note: see declaration of 'Hand'
-     1>c:\users\zachary\documents\github\csi-project\projet\deeraction.cpp(4): error C2512: 'ActionCard': no appropriate default constructor available
-         c:\users\zachary\documents\github\csi-project\projet\actioncard.h(25): note: see declaration of 'ActionCard'
+     1>c:\users\zachary\documents\github\csi-project\projet\actioncard.h(16): error C3646: 'query': unknown override specifier
+     1>c:\users\zachary\documents\github\csi-project\projet\actioncard.h(16): error C2059: syntax error: ')'
+     1>c:\users\zachary\documents\github\csi-project\projet\actioncard.h(16): error C2238: unexpected token(s) preceding ';'
+     1>c:\users\zachary\documents\github\csi-project\projet\actioncard.h(17): error C2061: syntax error: identifier 'QueryResult'
          Deck.cpp
      1>c:\users\zachary\documents\github\csi-project\projet\deck.cpp(5): error C2955: 'Deck': use of class template requires template argument list
-         c:\users\zachary\documents\github\csi-project\projet\deck.h(8): note: see declaration of 'Deck'
-     1>c:\users\zachary\documents\github\csi-project\projet\deck.cpp(8): error C2244: 'Deck::Deck': unable to match function definition to an existing declaration
+         c:\users\zachary\documents\github\csi-project\projet\deck.h(9): note: see declaration of 'Deck'
+     1>c:\users\zachary\documents\github\csi-project\projet\deck.cpp(7): error C2244: 'Deck::Deck': unable to match function definition to an existing declaration
          c:\users\zachary\documents\github\csi-project\projet\deck.cpp(5): note: see declaration of 'Deck::Deck'
-         c:\users\zachary\documents\github\csi-project\projet\deck.cpp(8): note: definition
-         c:\users\zachary\documents\github\csi-project\projet\deck.cpp(8): note: 'Deck::Deck(void)'
-         c:\users\zachary\documents\github\csi-project\projet\deck.cpp(8): note: existing declarations
-         c:\users\zachary\documents\github\csi-project\projet\deck.cpp(8): note: 'Deck<C>::Deck(void)'
-     1>c:\users\zachary\documents\github\csi-project\projet\deck.cpp(14): error C2244: 'Deck::~Deck': unable to match function definition to an existing declaration
-         c:\users\zachary\documents\github\csi-project\projet\deck.cpp(11): note: see declaration of 'Deck::~Deck'
-         c:\users\zachary\documents\github\csi-project\projet\deck.cpp(14): note: definition
-         c:\users\zachary\documents\github\csi-project\projet\deck.cpp(14): note: 'Deck::~Deck(void) noexcept'
-         c:\users\zachary\documents\github\csi-project\projet\deck.cpp(14): note: existing declarations
-         c:\users\zachary\documents\github\csi-project\projet\deck.cpp(14): note: 'Deck<C>::~Deck(void)'
-     1>c:\users\zachary\documents\github\csi-project\projet\deck.cpp(20): error C2244: 'Deck::draw': unable to match function definition to an existing declaration
-         c:\users\zachary\documents\github\csi-project\projet\deck.cpp(17): note: see declaration of 'Deck::draw'
-         c:\users\zachary\documents\github\csi-project\projet\deck.cpp(20): note: definition
-         c:\users\zachary\documents\github\csi-project\projet\deck.cpp(20): note: 'std::shared_ptr<_Ty> Deck::draw(void)'
-         c:\users\zachary\documents\github\csi-project\projet\deck.cpp(20): note: existing declarations
-         c:\users\zachary\documents\github\csi-project\projet\deck.cpp(20): note: 'std::shared_ptr<_Ty> Deck<C>::draw(void)'
+         c:\users\zachary\documents\github\csi-project\projet\deck.cpp(7): note: definition
+         c:\users\zachary\documents\github\csi-project\projet\deck.cpp(7): note: 'Deck::Deck(void)'
+         c:\users\zachary\documents\github\csi-project\projet\deck.cpp(7): note: existing declarations
+         c:\users\zachary\documents\github\csi-project\projet\deck.cpp(7): note: 'Deck<C>::Deck(void)'
+     1>c:\users\zachary\documents\github\csi-project\projet\deck.cpp(13): error C2244: 'Deck::~Deck': unable to match function definition to an existing declaration
+         c:\users\zachary\documents\github\csi-project\projet\deck.cpp(10): note: see declaration of 'Deck::~Deck'
+         c:\users\zachary\documents\github\csi-project\projet\deck.cpp(13): note: definition
+         c:\users\zachary\documents\github\csi-project\projet\deck.cpp(13): note: 'Deck::~Deck(void) noexcept'
+         c:\users\zachary\documents\github\csi-project\projet\deck.cpp(13): note: existing declarations
+         c:\users\zachary\documents\github\csi-project\projet\deck.cpp(13): note: 'Deck<C>::~Deck(void)'
+     1>c:\users\zachary\documents\github\csi-project\projet\deck.cpp(19): error C2244: 'Deck::draw': unable to match function definition to an existing declaration
+         c:\users\zachary\documents\github\csi-project\projet\deck.cpp(16): note: see declaration of 'Deck::draw'
+         c:\users\zachary\documents\github\csi-project\projet\deck.cpp(19): note: definition
+         c:\users\zachary\documents\github\csi-project\projet\deck.cpp(19): note: 'std::shared_ptr<_Ty> Deck::draw(void)'
+         c:\users\zachary\documents\github\csi-project\projet\deck.cpp(19): note: existing declarations
+         c:\users\zachary\documents\github\csi-project\projet\deck.cpp(19): note: 'std::shared_ptr<_Ty> Deck<C>::draw(void)'
          BearAction.cpp
      1>c:\users\zachary\documents\github\csi-project\projet\player.h(25): error C2955: 'Hand': use of class template requires template argument list
          c:\users\zachary\documents\github\csi-project\projet\hand.h(7): note: see declaration of 'Hand'
-     1>c:\users\zachary\documents\github\csi-project\projet\bearaction.cpp(4): error C2512: 'ActionCard': no appropriate default constructor available
-         c:\users\zachary\documents\github\csi-project\projet\actioncard.h(25): note: see declaration of 'ActionCard'
+     1>c:\users\zachary\documents\github\csi-project\projet\actioncard.h(16): error C3646: 'query': unknown override specifier
+     1>c:\users\zachary\documents\github\csi-project\projet\actioncard.h(16): error C2059: syntax error: ')'
+     1>c:\users\zachary\documents\github\csi-project\projet\actioncard.h(16): error C2238: unexpected token(s) preceding ';'
+     1>c:\users\zachary\documents\github\csi-project\projet\actioncard.h(17): error C2061: syntax error: identifier 'QueryResult'
+         AnimalCardFactory.cpp
+     1>c:\users\zachary\documents\github\csi-project\projet\player.h(25): error C2955: 'Hand': use of class template requires template argument list
+         c:\users\zachary\documents\github\csi-project\projet\hand.h(7): note: see declaration of 'Hand'
+     1>c:\users\zachary\documents\github\csi-project\projet\actioncard.h(16): error C3646: 'query': unknown override specifier
+     1>c:\users\zachary\documents\github\csi-project\projet\actioncard.h(16): error C2059: syntax error: ')'
+     1>c:\users\zachary\documents\github\csi-project\projet\actioncard.h(16): error C2238: unexpected token(s) preceding ';'
+     1>c:\users\zachary\documents\github\csi-project\projet\actioncard.h(17): error C2061: syntax error: identifier 'QueryResult'
          AnimalCard.cpp
+     1>c:\users\zachary\documents\github\csi-project\projet\animalcard.cpp(13): error C2059: syntax error: '<<'
+     1>c:\users\zachary\documents\github\csi-project\projet\animalcard.cpp(15): error C2059: syntax error: '=='
          ActionCard.cpp
      1>c:\users\zachary\documents\github\csi-project\projet\player.h(25): error C2955: 'Hand': use of class template requires template argument list
          c:\users\zachary\documents\github\csi-project\projet\hand.h(7): note: see declaration of 'Hand'
-     1>c:\users\zachary\documents\github\csi-project\projet\actioncard.cpp(5): error C2512: 'NoSplit': no appropriate default constructor available
-         c:\users\zachary\documents\github\csi-project\projet\nosplit.h(4): note: see declaration of 'NoSplit'
+     1>c:\users\zachary\documents\github\csi-project\projet\actioncard.h(16): error C3646: 'query': unknown override specifier
+     1>c:\users\zachary\documents\github\csi-project\projet\actioncard.h(16): error C2059: syntax error: ')'
+     1>c:\users\zachary\documents\github\csi-project\projet\actioncard.h(16): error C2238: unexpected token(s) preceding ';'
+     1>c:\users\zachary\documents\github\csi-project\projet\actioncard.h(17): error C2061: syntax error: identifier 'QueryResult'
+     1>c:\users\zachary\documents\github\csi-project\projet\actioncard.cpp(37): error C2039: 'query': is not a member of 'ActionCard'
+         c:\users\zachary\documents\github\csi-project\projet\actioncard.h(10): note: see declaration of 'ActionCard'
+     1>c:\users\zachary\documents\github\csi-project\projet\actioncard.cpp(41): error C2065: 'act': undeclared identifier
+     1>c:\users\zachary\documents\github\csi-project\projet\actioncard.cpp(48): error C2065: 'act': undeclared identifier
+     1>c:\users\zachary\documents\github\csi-project\projet\actioncard.cpp(55): error C2065: 'act': undeclared identifier
+     1>c:\users\zachary\documents\github\csi-project\projet\actioncard.cpp(68): error C2065: 'act': undeclared identifier
+     1>c:\users\zachary\documents\github\csi-project\projet\actioncard.cpp(74): error C2065: 'act': undeclared identifier
+     1>c:\users\zachary\documents\github\csi-project\projet\actioncard.cpp(90): error C2511: 'void ActionCard::perform(Table &,Player *,QueryResult)': overloaded member function not found in 'ActionCard'
+         c:\users\zachary\documents\github\csi-project\projet\actioncard.h(10): note: see declaration of 'ActionCard'
+     1>c:\users\zachary\documents\github\csi-project\projet\actioncard.cpp(92): error C2677: binary '==': no global operator found which takes type 'action' (or there is no acceptable conversion)
+     1>c:\users\zachary\documents\github\csi-project\projet\actioncard.cpp(95): error C2677: binary '==': no global operator found which takes type 'action' (or there is no acceptable conversion)
+     1>c:\users\zachary\documents\github\csi-project\projet\actioncard.cpp(98): error C2677: binary '==': no global operator found which takes type 'action' (or there is no acceptable conversion)
+     1>c:\users\zachary\documents\github\csi-project\projet\actioncard.cpp(101): error C2677: binary '==': no global operator found which takes type 'action' (or there is no acceptable conversion)
+     1>c:\users\zachary\documents\github\csi-project\projet\actioncard.cpp(104): error C2677: binary '==': no global operator found which takes type 'action' (or there is no acceptable conversion)
          Generating Code...
      1>Done Building Project "C:\Users\Zachary\Documents\GitHub\CSI-Project\Projet\Projet.vcxproj" (Rebuild target(s)) -- FAILED.
 
 Build FAILED.
 
-Time Elapsed 00:00:07.27
+Time Elapsed 00:00:07.59

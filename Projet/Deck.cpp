@@ -12,8 +12,6 @@ Deck::~Deck()
 
 }
 
-
-
 template <class C>
 std::shared_ptr<C> Deck::draw()
 {

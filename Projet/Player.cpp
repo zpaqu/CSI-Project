@@ -2,9 +2,13 @@
 
 Player::Player()
 {
+	num = 1; 
+	//Player number!!!
 	std::cout << "Quel est le nom du joueur";
 	std::cin >> name;
-	playerHand();
+
+	playerHand = Hand();
+
 	bool flag = true;
 	while (flag) {
 		int x = rand() % 5;
@@ -58,6 +62,11 @@ std::string Player::getSecretAnimal()
 {
 	return sAnimal;
 
+}
+
+Hand<std::shared_ptr<AnimalCard>> getHand()
+{
+	return playerHand; 
 }
 
 void Player::print()

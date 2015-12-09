@@ -17,9 +17,11 @@ public:
 	~Player();
 	std::string swapSecretAnimal(std::string&);
 	std::string getSecretAnimal();
+	Hand<std::shared_ptr<AnimalCard>> getHand();
 	void print();
 private:
 	std::string name;
+	int num;
 	std::string sAnimal;
-	Hand playerHand;
+	Hand<class C> playerHand;
 };

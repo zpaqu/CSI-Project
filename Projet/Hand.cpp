@@ -6,7 +6,6 @@ template<class C, class Allocator = std::allocator<C>>
 Hand::Hand()
 {
 	cardNumber = 0;
-	
 }
 
 template<class C, class Allocator = std::allocator<C>>
