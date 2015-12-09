@@ -4,9 +4,8 @@
 class SplitTwo : public AnimalCard
 {
 public:
-	SplitTwo(char a, char b);
+	SplitTwo(char, char, char, char);
 	~SplitTwo();
-
 private:
 
 };
