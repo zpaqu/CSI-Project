@@ -11,17 +11,13 @@
 
 AnimalCardFactory::AnimalCardFactory()
 {
-	char bear='b';
-	char moose='m';
-	char dear='d';
-	char wolf='w';
-	char hare = 'h';
+	
 	char* animals = new char[5];
-	animals[0] = bear;
-	animals[1] = moose;
-	animals[2] = dear;
-	animals[3] = wolf;
-	animals[4] = hare;
+	animals[0] = 'b';
+	animals[1] = 'm';
+	animals[2] = 'd';
+	animals[3] = 'w';
+	animals[4] = 'h';
 
 
 	//5 nosplit
@@ -34,38 +30,38 @@ AnimalCardFactory::AnimalCardFactory()
 
 
 	//10 splittwo
-	myDeck.add(SplitTwo(animals[0], animals[1]),true);
-	myDeck.add(SplitTwo(animals[1], animals[2]), false);
-	myDeck.add(SplitTwo(animals[2], animals[3]), true);
-	myDeck.add(SplitTwo(animals[3], animals[4]), false);
-	myDeck.add(SplitTwo(animals[4], animals[0]), true);
-	myDeck.add(SplitTwo(animals[0], animals[2]), false);
-	myDeck.add(SplitTwo(animals[1], animals[3]), true);
-	myDeck.add(SplitTwo(animals[2], animals[4]), false);
-	myDeck.add(SplitTwo(animals[3], animals[0]), true);
-	myDeck.add(SplitTwo(animals[4], animals[1]), false);
+	myDeck.add(SplitTwo(animals[0], animals[0], animals[1], animals[1]));
+	myDeck.add(SplitTwo(animals[1], animals[1], animals[2], animals[2]));
+	myDeck.add(SplitTwo(animals[2], animals[2], animals[3], animals[3]));
+	myDeck.add(SplitTwo(animals[3], animals[3], animals[4], animals[4]));
+	myDeck.add(SplitTwo(animals[4], animals[4], animals[0], animals[0]));
+	myDeck.add(SplitTwo(animals[0], animals[2], animals[0], animals[2]));
+	myDeck.add(SplitTwo(animals[1], animals[3], animals[1], animals[3]));
+	myDeck.add(SplitTwo(animals[2], animals[4], animals[2], animals[4]));
+	myDeck.add(SplitTwo(animals[3], animals[0], animals[3], animals[0]));
+	myDeck.add(SplitTwo(animals[4], animals[1], animals[4], animals[1]));
 
 	//20 splitTree
-	myDeck.add(SplitThree(animals[0], animals[1], animals[2]), true);
-	myDeck.add(SplitThree(animals[0], animals[1], animals[3]), false);
-	myDeck.add(SplitThree(animals[0], animals[2], animals[4]), true);
-	myDeck.add(SplitThree(animals[0], animals[2], animals[1]), false);
-	myDeck.add(SplitThree(animals[1], animals[3], animals[4]), true);
-	myDeck.add(SplitThree(animals[1], animals[3], animals[0]), false);
-	myDeck.add(SplitThree(animals[1], animals[4], animals[2]), true);
-	myDeck.add(SplitThree(animals[1], animals[4], animals[3]), false);
-	myDeck.add(SplitThree(animals[2], animals[0], animals[1]), true);
-	myDeck.add(SplitThree(animals[2], animals[0], animals[3]), false);
-	myDeck.add(SplitThree(animals[2], animals[3], animals[4]), true);
-	myDeck.add(SplitThree(animals[2], animals[3], animals[0]), false);
-	myDeck.add(SplitThree(animals[3], animals[4], animals[0]), true);
-	myDeck.add(SplitThree(animals[3], animals[4], animals[1]), false);
-	myDeck.add(SplitThree(animals[3], animals[0], animals[2]), true);
-	myDeck.add(SplitThree(animals[3], animals[0], animals[4]), false);
-	myDeck.add(SplitThree(animals[4], animals[1], animals[0]), true);
-	myDeck.add(SplitThree(animals[4], animals[1], animals[2]), false);
-	myDeck.add(SplitThree(animals[4], animals[2], animals[1]), true);
-	myDeck.add(SplitThree(animals[4], animals[2], animals[3]), false);
+	myDeck.add(SplitThree(animals[0], animals[0], animals[1], animals[2]));
+	myDeck.add(SplitThree(animals[0], animals[1], animals[0], animals[3]));
+	myDeck.add(SplitThree(animals[0], animals[2], animals[4], animals[2]));
+	myDeck.add(SplitThree(animals[0], animals[2], animals[1], animals[1]));
+	myDeck.add(SplitThree(animals[1], animals[1], animals[3], animals[4]));
+	myDeck.add(SplitThree(animals[1], animals[3], animals[1], animals[0]));
+	myDeck.add(SplitThree(animals[1], animals[4], animals[2], animals[4]));
+	myDeck.add(SplitThree(animals[1], animals[4], animals[3], animals[3]));
+	myDeck.add(SplitThree(animals[2], animals[2], animals[0], animals[1]));
+	myDeck.add(SplitThree(animals[2], animals[0], animals[2], animals[3]));
+	myDeck.add(SplitThree(animals[2], animals[3], animals[4], animals[3]));
+	myDeck.add(SplitThree(animals[2], animals[3], animals[0], animals[0]));
+	myDeck.add(SplitThree(animals[3], animals[3], animals[4], animals[0]));
+	myDeck.add(SplitThree(animals[3], animals[4], animals[3], animals[1]));
+	myDeck.add(SplitThree(animals[3], animals[0], animals[2], animals[0]));
+	myDeck.add(SplitThree(animals[3], animals[0], animals[4], animals[4]));
+	myDeck.add(SplitThree(animals[4], animals[4], animals[1], animals[0]));
+	myDeck.add(SplitThree(animals[4], animals[1], animals[4], animals[2]));
+	myDeck.add(SplitThree(animals[4], animals[2], animals[1], animals[2]));
+	myDeck.add(SplitThree(animals[4], animals[2], animals[3], animals[3]));
 
 
 			//15 splitFour
