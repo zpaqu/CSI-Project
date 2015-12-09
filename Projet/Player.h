@@ -15,14 +15,13 @@ public:
 	 
 	Player();
 	~Player();
-	Hand getHand();
 	std::string swapSecretAnimal(std::string&);
 	std::string getSecretAnimal();
-	Hand<std::shared_ptr<AnimalCard>> getHand();
+	Hand getHand();
 	void print();
 private:
 	std::string name;
 	int num;
 	std::string sAnimal;
-	Hand<class C> playerHand;
+	Hand playerHand;
 };
