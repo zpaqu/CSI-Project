@@ -19,11 +19,11 @@ int main() {
 		std::cout << "entrer le nombre de joueurs" << std::endl;
 		std::cin >> numJ;
 	}
-	Player *play = new Player[numJ - 1];
+	Player* play = new Player[numJ - 1];
 	Player p1();
 	play[0] = p1;
 	activeHand = play[0].getHand();
-	activeHand += myDeck.draw;
+	activeHand += myDeck.draw();
 	activeHand += myDeck.draw;
 	activeHand += myDeck.draw;
 

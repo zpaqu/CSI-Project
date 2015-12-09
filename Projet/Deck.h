@@ -5,14 +5,12 @@
 
 using namespace std;
 
-template <class C>
-class Deck : public vector<C>
+template <class T>
+class Deck : public vector<T>
 {
 public:
-	Deck();
-	~Deck();
-	std::shared_ptr<C> draw();
-	void add(AnimalCard c);
+	T draw();
+	void add(T c);
 
 private:
 

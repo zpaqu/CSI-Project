@@ -1,25 +1,14 @@
 #include "Deck.h"
 
 
-template <class C>
-Deck::Deck()
+template <class T>
+T Deck<T>::draw()
 {
+	return pop_back();
 }
 
-template <class C>
-Deck::~Deck()
+template<class T>
+void Deck<T>::add(T t)
 {
-
-}
-
-template <class C>
-std::shared_ptr<C> Deck::draw()
-{
-
-}
-
-template<class C>
-void Deck<C>::add(AnimalCard c)
-{
-
+	push_back(t);
 }

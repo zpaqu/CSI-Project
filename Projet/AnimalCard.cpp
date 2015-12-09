@@ -10,10 +10,6 @@ AnimalCard::AnimalCard(char a, char b, char c, char d)
 	
 AnimalCard::~AnimalCard()
 {
-<<<<<<< HEAD
-	delete[] animals;
-=======
-
 	delete[] animals;
 }
 
@@ -31,7 +27,6 @@ void AnimalCard::changeOrientation()
 	else if (orient == Down) {
 		orient = Up;
 	}
->>>>>>> origin/master
 }
 
 void AnimalCard::setOrientation(Orientation o)
