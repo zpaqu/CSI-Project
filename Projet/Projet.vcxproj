@@ -172,6 +172,7 @@
     <ClInclude Include="BearAction.h" />
     <ClInclude Include="Deck.h" />
     <ClInclude Include="DeerAction.h" />
+    <ClInclude Include="Exception.h" />
     <ClInclude Include="Hand.h" />
     <ClInclude Include="HareAction.h" />
     <ClInclude Include="Joker.h" />

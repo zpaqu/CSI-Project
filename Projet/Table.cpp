@@ -1,5 +1,5 @@
 #include "Table.h"
-
+#include "Exception.h"
 
 Table::Table()
 {
@@ -15,20 +15,14 @@ Table::~Table()
 
 int Table::addAt(std::shared_ptr<AnimalCard> card, int x, int y)
 {
-	try
+	if (validPosition(card, x, y))
 	{
-		if (validPosition(card, x, y))
-		{
-			tableau[x][y] = card;
-		}
-		else 
-		{
-			throw 1;
-		}
+		tableau[x][y] = card;
 	}
-	catch (int e)
+	else 
 	{
-		std::cout << "Illegal Argument" << std::endl; //Should be illegal placement FIX THIS!!!!!
+		Exception erreur("IllegalPlacement");
+		throw erreur;
 	}
 	return tableau[x][y]->animalNumber;
 }
