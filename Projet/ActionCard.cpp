@@ -89,17 +89,18 @@ QueryResult ActionCard::query()
 
 void ActionCard::perform(Table& t, Player* p , QueryResult q)
 {
-
 	if (act == Bear) {
 		Hand a = p->getHand();
 		Hand b = p[q.playerNum].getHand();
 		//Switch pointers of hands
 	}
+
 	else if (act == Deer) {
 		std::string s = p->getSecretAnimal();
 		p->swapSecretAnimal(p[q.playerNum].getSecretAnimal());
 		p[q.playerNum].swapSecretAnimal(s); 
 	}
+
 	else if (act == Hare) {
 		std::shared_ptr<AnimalCard> sP1 = t.pickAt(q.cX, q.cY);
 		if (sP1 != nullptr)
@@ -107,8 +108,22 @@ void ActionCard::perform(Table& t, Player* p , QueryResult q)
 			t.addAt(sP1, q.rX, q.rY);
 		}
 	}
+
 	else if (act == Moose) {
+		for (int i = 0; i < p->getNum(); i++)
+		{
+			--p;
+		}
 		
+		Player* tP = p;
+		std::string tempA = (tP + (t.numPlayers - 1))->getSecretAnimal();
+
+		for (int i = 0; i < t.numPlayers; i++)
+		{
+
+		}
+
+
 	}
 	else if (act == Wolf) {
 		std::shared_ptr<AnimalCard> sP = t.pickAt(q.cX, q.cY);
