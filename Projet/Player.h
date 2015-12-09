@@ -15,6 +15,7 @@ public:
 	 
 	Player();
 	~Player();
+	Hand getHand();
 	std::string swapSecretAnimal(std::string&);
 	std::string getSecretAnimal();
 	void print();

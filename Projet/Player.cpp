@@ -46,6 +46,11 @@ Player::~Player()
 
 }
 
+Hand Player::getHand()
+{
+	return playerHand();
+}
+
 std::string Player::swapSecretAnimal(std::string& a)
 {
 	std::string temp = a;
