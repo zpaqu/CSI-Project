@@ -50,6 +50,11 @@ Player::~Player()
 
 }
 
+int Player::getNum()
+{
+	return num;
+}
+
 Hand Player::getHand()
 {
 	return playerHand();
@@ -69,10 +74,6 @@ std::string Player::getSecretAnimal()
 
 }
 
-Hand<std::shared_ptr<AnimalCard>> getHand()
-{
-	return playerHand; 
-}
 
 void Player::print()
 {

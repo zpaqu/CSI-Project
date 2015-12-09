@@ -113,7 +113,7 @@ AnimalCardFactory * AnimalCardFactory::getFactory()
 	//dont forget the destructor in whatever will call this
 }
 
-Deck<std::shared_ptr<AnimalCard>> AnimalCardFactory::getDeck()
+Deck<AnimalCard> AnimalCardFactory::getDeck()
 {
 	std::random_shuffle(std::begin(myDeck), std::end(myDeck));
 	return myDeck;

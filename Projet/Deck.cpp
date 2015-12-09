@@ -1,6 +1,5 @@
 #include "Deck.h"
 
-
 template <class T>
 T Deck<T>::draw()
 {

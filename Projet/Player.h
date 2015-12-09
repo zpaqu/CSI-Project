@@ -18,6 +18,7 @@ public:
 	std::string swapSecretAnimal(std::string&);
 	std::string getSecretAnimal();
 	Hand getHand();
+	int getNum();
 	void print();
 private:
 	std::string name;
