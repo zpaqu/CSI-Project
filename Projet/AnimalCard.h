@@ -14,6 +14,8 @@ public:
 	EvenOdd row = Odd;
 	AnimalCard(char,char,char,char);
 	~AnimalCard();
+	void print();
+	void changeOrientation();
 	virtual void setOrientation(Orientation);
 	virtual void setRow(EvenOdd);
 	virtual void printRow(EvenOdd);

@@ -10,7 +10,28 @@ AnimalCard::AnimalCard(char a, char b, char c, char d)
 	
 AnimalCard::~AnimalCard()
 {
+<<<<<<< HEAD
 	delete[] animals;
+=======
+
+	delete[] animals;
+}
+
+void AnimalCard::print()
+{
+	printRow(Odd);
+	printRow(Even);
+}
+
+void AnimalCard::changeOrientation()
+{
+	if (orient == Up) {
+		orient = Down;
+	}
+	else if (orient == Down) {
+		orient = Up;
+	}
+>>>>>>> origin/master
 }
 
 void AnimalCard::setOrientation(Orientation o)
