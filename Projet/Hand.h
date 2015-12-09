@@ -2,13 +2,13 @@
 #include <memory>
 #include "AnimalCard.h"
 
-template<class C, class Allocator = std::allocator<C>> 
+
 class Hand
 {
 public:
 	Hand();
 	~Hand();
-	std::list<std::shared_ptr<AnimalCard>> myHand;
+	std::list<std::shared_ptr<AnimalCard>> cards;
 	int cardNumber;
 	Hand& operator+=(std::shared_ptr<AnimalCard>);
 	Hand& operator-=(std::shared_ptr<AnimalCard>);

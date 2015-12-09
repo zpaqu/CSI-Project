@@ -10,10 +10,7 @@ AnimalCard::AnimalCard(char a, char b, char c, char d)
 	
 AnimalCard::~AnimalCard()
 {
-<<<<<<< HEAD
 	delete[] animals;
-=======
->>>>>>> origin/master
 }
 
 void AnimalCard::setOrientation(Orientation o)

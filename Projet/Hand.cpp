@@ -1,62 +1,62 @@
 #include "Hand.h"
 #include <list>
+#include <iomanip>
 
 
-template<class C, class Allocator = std::allocator<C>>
 Hand::Hand()
 {
 	cardNumber = 0;
 }
 
-template<class C, class Allocator = std::allocator<C>>
 Hand::~Hand()
 {
-	delete myHand;
+	cards.clear();
 }
 
-template<class C, class Allocator = std::allocator<C>>
+
 Hand& Hand::operator+=(std::shared_ptr<AnimalCard> param)
 {
-	myHand.insert(param);
+	cards.push_back(param);
 	cardNumber++;
 }
 
-template<class C, class Allocator = std::allocator<C>>
 Hand& Hand::operator-=(std::shared_ptr<AnimalCard> param)
 {
-	myHand.remove(param);
+	cards.remove(param);
 	cardNumber--;
 }
 
-template<class C, class Allocator = std::allocator<C>>
+
 std::shared_ptr<AnimalCard> Hand::operator[] (int param)
 {
-	std::list<std::shared_ptr<AnimalCard>>::iterator it = std::next(myHand.begin(), param);
-	return it;
+	std::list<std::shared_ptr<AnimalCard>>::iterator it = std::next(cards.begin(), param);
+	return *it;
 }
 
-template<class C, class Allocator = std::allocator<C>>
 int Hand::noCards()
 {
 	return cardNumber;
 }
 
-template<class C, class Allocator = std::allocator<C>>
+
 void Hand::print()
 {
-	for (int i = 0; i <= cardNumber; i++) {
-		std::cout << i << " ";
+	int i = 1;
+	std::list<std::shared_ptr<AnimalCard>>::iterator it;
+	for (it = cards.begin(); it != cards.end(); ++it, i++){
+		std::cout << std::setw(3) << std::left << i;
+	}
+	std::cout << std::endl;
+
+	for (it = cards.begin(); it != cards.end(); ++it) {
+		(*it)->printRow(Odd);
 
 	}
-	std::cout << endl;
-	for (int i = 0; i <= cardNumber; i++) {
-		myHand[i].printRow(Odd);
+	std::cout << std::endl;
+
+	for (it = cards.begin(); it != cards.end(); ++it) {
+		(*it)->printRow(Even);
 
 	}
-	for (int i = 0; i <= cardNumber; i++) {
-		myHand[i].printRow(Even);
-
-	}
-
-
+	std::cout << std::endl;
 }

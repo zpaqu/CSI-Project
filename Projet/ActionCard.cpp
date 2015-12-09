@@ -92,7 +92,7 @@ void ActionCard::perform(Table& t, Player* p , QueryResult q)
 
 	if (act == Bear) {
 		Hand a = p->getHand();
-		Hand b = p[q.playerNum];
+		Hand b = p[q.playerNum].getHand();
 		//Switch pointers of hands
 	}
 	if (act == Deer) {

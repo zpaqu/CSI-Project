@@ -4,6 +4,7 @@
 #include "ActionCard.h"
 #include "Table.h"
 #include "Deck.h"
+#include "Hand.h"
 
 int main() {
 	//option to load from file
