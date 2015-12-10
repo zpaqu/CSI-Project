@@ -1,7 +1,5 @@
 #include "Deck.h"
 
-<<<<<<< HEAD
-=======
 //Auteurs: Nicolas Daigle (7223444), Zachary Paquette (7230016)
 //Cours: CSI2772
 //Date de remise: 9 Decembre 2015
@@ -19,4 +17,3 @@ void Deck<T>::add(T t) // Ajoute un objet dans le Deck. Dans ce cas ce sera un o
 {
 	push_back(t);
 }
->>>>>>> origin/master

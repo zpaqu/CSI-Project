@@ -12,24 +12,8 @@
 //Cours: CSI2772
 //Date de remise: 9 Decembre 2015
 
-<<<<<<< HEAD
-template <class T>
-T Deck<T>::draw()
-{
-	return pop_back();
-}
 
-template<class T>
-void Deck<T>::add(T t)
-{
-	push_back(t);
-}
-
-
-=======
-
-//Lorssqu'une AnimalCardFactory est cree, on ajoute toute les possibilites de carte dans un Deck de type AnimalCard
->>>>>>> origin/master
+//Lorsqu'une AnimalCardFactory est cree, on ajoute toute les possibilites de carte dans un Deck de type AnimalCard
 AnimalCardFactory::AnimalCardFactory()
 {
 	
