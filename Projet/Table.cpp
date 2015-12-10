@@ -148,14 +148,30 @@ int Table::compare(std::shared_ptr<AnimalCard> card, char a)
 
 void Table::print()
 {
-	for (int x = 0; x < 103; x++) {
-		if(x<10)
+	for (int y = 0; y < 103; y++) {
+		if(y<10)
 			std::cout << "0";
-		if (x<10)
+		if (y<100)
 			std::cout << "0";
-		std::cout << "x";
-		for (int y = 0; y < 103; y++) {
-
+		std::cout << "y";
+		for (int x = 0; x < 103; x++) {
+			if (y == 0) {
+				if (x < 10)
+					std::cout << "0";
+				if (x < 100)
+					std::cout << "0";
+				std::cout << "x";
+			}
+			*tableau[x][y].printRow(Odd);
 		}
+		for (int x = 0; x < 103; x++) {
+			if (y == 0) {
+				std::cout << "   ";
+			}
+			*tableau[x][y].printRow(Even);
+			std::cout << " ";
+		}
+		std::cout << std::endl;
+
 	}
 }
