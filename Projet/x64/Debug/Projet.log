@@ -1,40 +1,14 @@
-<<<<<<< HEAD
-﻿Build started 12/9/2015 9:59:12 PM.
+﻿Build started 12/9/2015 10:22:46 PM.
      1>Project "C:\Users\Nick\Documents\Ecole\Ans 3\CSI2772\githubwithZack\CSI-Project\Projet\Projet.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"x64\Debug\\" /Fd"x64\Debug\vc140.pdb" /Gd /TP /errorReport:prompt Game.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"x64\Debug\\" /Fd"x64\Debug\vc140.pdb" /Gd /TP /errorReport:prompt AnimalCardFactory.cpp Deck.cpp Game.cpp
          Game.cpp
+         AnimalCardFactory.cpp
+         Generating Code...
+         Skipping... (no relevant changes detected)
+         Deck.cpp
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Nick\Documents\Ecole\Ans 3\CSI2772\githubwithZack\CSI-Project\x64\Debug\Projet.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\Nick\Documents\Ecole\Ans 3\CSI2772\githubwithZack\CSI-Project\x64\Debug\Projet.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Nick\Documents\Ecole\Ans 3\CSI2772\githubwithZack\CSI-Project\x64\Debug\Projet.lib" /MACHINE:X64 x64\Debug\ActionCard.obj
-=======
-﻿Build started 12/9/2015 8:52:35 PM.
-     1>Project "C:\Users\Zachary\Documents\GitHub\CSI-Project\Projet\Projet.vcxproj" on node 2 (Rebuild target(s)).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"x64\Debug\\" /Fd"x64\Debug\vc140.pdb" /Gd /TP /errorReport:prompt ActionCard.cpp AnimalCard.cpp AnimalCardFactory.cpp BearAction.cpp Deck.cpp DeerAction.cpp Game.cpp Hand.cpp HareAction.cpp Joker.cpp MooseAction.cpp NoSplit.cpp Player.cpp QueryResult.cpp SplitFour.cpp SplitThree.cpp SplitTwo.cpp StartCard.cpp Table.cpp WolfAction.cpp
-         WolfAction.cpp
-         Table.cpp
-         StartCard.cpp
-         SplitTwo.cpp
-         SplitThree.cpp
-         SplitFour.cpp
-         QueryResult.cpp
-         Player.cpp
-         NoSplit.cpp
-         MooseAction.cpp
-         Joker.cpp
-         HareAction.cpp
-         Hand.cpp
-         Game.cpp
-         DeerAction.cpp
-         Deck.cpp
-         BearAction.cpp
-         AnimalCardFactory.cpp
-         AnimalCard.cpp
-         ActionCard.cpp
-         Generating Code...
-       Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Zachary\Documents\GitHub\CSI-Project\x64\Debug\Projet.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\Zachary\Documents\GitHub\CSI-Project\x64\Debug\Projet.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Zachary\Documents\GitHub\CSI-Project\x64\Debug\Projet.lib" /MACHINE:X64 x64\Debug\ActionCard.obj
->>>>>>> origin/master
          x64\Debug\AnimalCard.obj
          x64\Debug\AnimalCardFactory.obj
          x64\Debug\BearAction.obj
@@ -54,21 +28,9 @@
          x64\Debug\StartCard.obj
          x64\Debug\Table.obj
          x64\Debug\WolfAction.obj
-<<<<<<< HEAD
-     1>Game.obj : error LNK2019: unresolved external symbol "public: class AnimalCard __cdecl Deck<class AnimalCard>::draw(void)" (?draw@?$Deck@VAnimalCard@@@@QEAA?AVAnimalCard@@XZ) referenced in function main
-     1>C:\Users\Nick\Documents\Ecole\Ans 3\CSI2772\githubwithZack\CSI-Project\x64\Debug\Projet.exe : fatal error LNK1120: 1 unresolved externals
-     1>Done Building Project "C:\Users\Nick\Documents\Ecole\Ans 3\CSI2772\githubwithZack\CSI-Project\Projet\Projet.vcxproj" (Build target(s)) -- FAILED.
+         Projet.vcxproj -> C:\Users\Nick\Documents\Ecole\Ans 3\CSI2772\githubwithZack\CSI-Project\x64\Debug\Projet.exe
+     1>Done Building Project "C:\Users\Nick\Documents\Ecole\Ans 3\CSI2772\githubwithZack\CSI-Project\Projet\Projet.vcxproj" (Build target(s)).
 
-Build FAILED.
+Build succeeded.
 
-Time Elapsed 00:00:01.84
-=======
-     1>AnimalCardFactory.obj : error LNK2019: unresolved external symbol "public: void __cdecl Deck<class AnimalCard>::add(class AnimalCard)" (?add@?$Deck@VAnimalCard@@@@QEAAXVAnimalCard@@@Z) referenced in function "public: __cdecl AnimalCardFactory::AnimalCardFactory(void)" (??0AnimalCardFactory@@QEAA@XZ)
-     1>Game.obj : error LNK2019: unresolved external symbol "public: class AnimalCard __cdecl Deck<class AnimalCard>::draw(void)" (?draw@?$Deck@VAnimalCard@@@@QEAA?AVAnimalCard@@XZ) referenced in function main
-     1>C:\Users\Zachary\Documents\GitHub\CSI-Project\x64\Debug\Projet.exe : fatal error LNK1120: 2 unresolved externals
-     1>Done Building Project "C:\Users\Zachary\Documents\GitHub\CSI-Project\Projet\Projet.vcxproj" (Rebuild target(s)) -- FAILED.
-
-Build FAILED.
-
-Time Elapsed 00:00:07.68
->>>>>>> origin/master
+Time Elapsed 00:00:03.43
