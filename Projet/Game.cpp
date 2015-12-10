@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 #include "Player.h"
 #include "AnimalCardFactory.h"
@@ -6,6 +7,10 @@
 #include "Deck.h"
 #include "Hand.h"
 #include "Exception.h"
+
+//Auteurs: Nicolas Daigle (7223444), Zachary Paquette (7230016)
+//Cours: CSI2772
+//Date de remise: 9 Decembre 2015
 
 int main() {
 	//option to load from file
@@ -72,7 +77,7 @@ int main() {
 			(*t).print();
 			activeHand = (&(*play[i]).getHand());//not sure if that makes sence (the & placement)
 			*activeHand += std::make_shared<AnimalCard>(myDeck.draw());
-			(*play[i]).print;
+			(*play[i]).print();
 			while (!cardPlacedLegaly)
 			{
 				int cardN = -1;

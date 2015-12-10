@@ -1,45 +1,54 @@
-﻿Build started 12/9/2015 8:34:07 PM.
-     1>Project "C:\Users\Nick\Documents\Ecole\Ans 3\CSI2772\githubwithZack\CSI-Project\Projet\Projet.vcxproj" on node 2 (Build target(s)).
+﻿Build started 12/9/2015 8:52:35 PM.
+     1>Project "C:\Users\Zachary\Documents\GitHub\CSI-Project\Projet\Projet.vcxproj" on node 2 (Rebuild target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"x64\Debug\\" /Fd"x64\Debug\vc140.pdb" /Gd /TP /errorReport:prompt ActionCard.cpp AnimalCardFactory.cpp BearAction.cpp Deck.cpp DeerAction.cpp Game.cpp HareAction.cpp MooseAction.cpp Player.cpp Table.cpp WolfAction.cpp
-         Table.cpp
-         Game.cpp
-     1>c:\users\nick\documents\ecole\ans 3\csi2772\githubwithzack\csi-project\projet\game.cpp(27): error C2677: binary '+=': no global operator found which takes type 'AnimalCard' (or there is no acceptable conversion)
-     1>c:\users\nick\documents\ecole\ans 3\csi2772\githubwithzack\csi-project\projet\game.cpp(28): error C2677: binary '+=': no global operator found which takes type 'AnimalCard' (or there is no acceptable conversion)
-     1>c:\users\nick\documents\ecole\ans 3\csi2772\githubwithzack\csi-project\projet\game.cpp(29): error C2677: binary '+=': no global operator found which takes type 'AnimalCard' (or there is no acceptable conversion)
-     1>c:\users\nick\documents\ecole\ans 3\csi2772\githubwithzack\csi-project\projet\game.cpp(34): error C2677: binary '+=': no global operator found which takes type 'AnimalCard' (or there is no acceptable conversion)
-     1>c:\users\nick\documents\ecole\ans 3\csi2772\githubwithzack\csi-project\projet\game.cpp(35): error C2677: binary '+=': no global operator found which takes type 'AnimalCard' (or there is no acceptable conversion)
-     1>c:\users\nick\documents\ecole\ans 3\csi2772\githubwithzack\csi-project\projet\game.cpp(36): error C2677: binary '+=': no global operator found which takes type 'AnimalCard' (or there is no acceptable conversion)
-     1>c:\users\nick\documents\ecole\ans 3\csi2772\githubwithzack\csi-project\projet\game.cpp(41): error C2677: binary '+=': no global operator found which takes type 'AnimalCard' (or there is no acceptable conversion)
-     1>c:\users\nick\documents\ecole\ans 3\csi2772\githubwithzack\csi-project\projet\game.cpp(42): error C2677: binary '+=': no global operator found which takes type 'AnimalCard' (or there is no acceptable conversion)
-     1>c:\users\nick\documents\ecole\ans 3\csi2772\githubwithzack\csi-project\projet\game.cpp(43): error C2677: binary '+=': no global operator found which takes type 'AnimalCard' (or there is no acceptable conversion)
-     1>c:\users\nick\documents\ecole\ans 3\csi2772\githubwithzack\csi-project\projet\game.cpp(50): error C2677: binary '+=': no global operator found which takes type 'AnimalCard' (or there is no acceptable conversion)
-     1>c:\users\nick\documents\ecole\ans 3\csi2772\githubwithzack\csi-project\projet\game.cpp(51): error C2677: binary '+=': no global operator found which takes type 'AnimalCard' (or there is no acceptable conversion)
-     1>c:\users\nick\documents\ecole\ans 3\csi2772\githubwithzack\csi-project\projet\game.cpp(52): error C2677: binary '+=': no global operator found which takes type 'AnimalCard' (or there is no acceptable conversion)
-     1>c:\users\nick\documents\ecole\ans 3\csi2772\githubwithzack\csi-project\projet\game.cpp(59): error C2677: binary '+=': no global operator found which takes type 'AnimalCard' (or there is no acceptable conversion)
-     1>c:\users\nick\documents\ecole\ans 3\csi2772\githubwithzack\csi-project\projet\game.cpp(60): error C2677: binary '+=': no global operator found which takes type 'AnimalCard' (or there is no acceptable conversion)
-     1>c:\users\nick\documents\ecole\ans 3\csi2772\githubwithzack\csi-project\projet\game.cpp(61): error C2677: binary '+=': no global operator found which takes type 'AnimalCard' (or there is no acceptable conversion)
-     1>c:\users\nick\documents\ecole\ans 3\csi2772\githubwithzack\csi-project\projet\game.cpp(74): error C2677: binary '+=': no global operator found which takes type 'AnimalCard' (or there is no acceptable conversion)
-     1>c:\users\nick\documents\ecole\ans 3\csi2772\githubwithzack\csi-project\projet\game.cpp(75): error C3867: 'Player::print': non-standard syntax; use '&' to create a pointer to member
-     1>c:\users\nick\documents\ecole\ans 3\csi2772\githubwithzack\csi-project\projet\game.cpp(112): error C2679: binary '-=': no operator found which takes a right-hand operand of type 'std::shared_ptr<AnimalCard>' (or there is no acceptable conversion)
-         c:\users\nick\documents\ecole\ans 3\csi2772\githubwithzack\csi-project\projet\game.cpp(112): note: could be 'built-in C++ operator-=(Hand *, __int64)'
-         c:\users\nick\documents\ecole\ans 3\csi2772\githubwithzack\csi-project\projet\game.cpp(112): note: while trying to match the argument list '(Hand *, std::shared_ptr<AnimalCard>)'
-         Deck.cpp
-         Generating Code...
-         Compiling...
-         AnimalCardFactory.cpp
-         Generating Code...
-         Compiling...
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"x64\Debug\\" /Fd"x64\Debug\vc140.pdb" /Gd /TP /errorReport:prompt ActionCard.cpp AnimalCard.cpp AnimalCardFactory.cpp BearAction.cpp Deck.cpp DeerAction.cpp Game.cpp Hand.cpp HareAction.cpp Joker.cpp MooseAction.cpp NoSplit.cpp Player.cpp QueryResult.cpp SplitFour.cpp SplitThree.cpp SplitTwo.cpp StartCard.cpp Table.cpp WolfAction.cpp
          WolfAction.cpp
+         Table.cpp
+         StartCard.cpp
+         SplitTwo.cpp
+         SplitThree.cpp
+         SplitFour.cpp
+         QueryResult.cpp
          Player.cpp
+         NoSplit.cpp
          MooseAction.cpp
+         Joker.cpp
          HareAction.cpp
+         Hand.cpp
+         Game.cpp
          DeerAction.cpp
+         Deck.cpp
          BearAction.cpp
+         AnimalCardFactory.cpp
+         AnimalCard.cpp
          ActionCard.cpp
          Generating Code...
-     1>Done Building Project "C:\Users\Nick\Documents\Ecole\Ans 3\CSI2772\githubwithZack\CSI-Project\Projet\Projet.vcxproj" (Build target(s)) -- FAILED.
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Zachary\Documents\GitHub\CSI-Project\x64\Debug\Projet.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /Debug /PDB:"C:\Users\Zachary\Documents\GitHub\CSI-Project\x64\Debug\Projet.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Zachary\Documents\GitHub\CSI-Project\x64\Debug\Projet.lib" /MACHINE:X64 x64\Debug\ActionCard.obj
+         x64\Debug\AnimalCard.obj
+         x64\Debug\AnimalCardFactory.obj
+         x64\Debug\BearAction.obj
+         x64\Debug\Deck.obj
+         x64\Debug\DeerAction.obj
+         x64\Debug\Game.obj
+         x64\Debug\Hand.obj
+         x64\Debug\HareAction.obj
+         x64\Debug\Joker.obj
+         x64\Debug\MooseAction.obj
+         x64\Debug\NoSplit.obj
+         x64\Debug\Player.obj
+         x64\Debug\QueryResult.obj
+         x64\Debug\SplitFour.obj
+         x64\Debug\SplitThree.obj
+         x64\Debug\SplitTwo.obj
+         x64\Debug\StartCard.obj
+         x64\Debug\Table.obj
+         x64\Debug\WolfAction.obj
+     1>AnimalCardFactory.obj : error LNK2019: unresolved external symbol "public: void __cdecl Deck<class AnimalCard>::add(class AnimalCard)" (?add@?$Deck@VAnimalCard@@@@QEAAXVAnimalCard@@@Z) referenced in function "public: __cdecl AnimalCardFactory::AnimalCardFactory(void)" (??0AnimalCardFactory@@QEAA@XZ)
+     1>Game.obj : error LNK2019: unresolved external symbol "public: class AnimalCard __cdecl Deck<class AnimalCard>::draw(void)" (?draw@?$Deck@VAnimalCard@@@@QEAA?AVAnimalCard@@XZ) referenced in function main
+     1>C:\Users\Zachary\Documents\GitHub\CSI-Project\x64\Debug\Projet.exe : fatal error LNK1120: 2 unresolved externals
+     1>Done Building Project "C:\Users\Zachary\Documents\GitHub\CSI-Project\Projet\Projet.vcxproj" (Rebuild target(s)) -- FAILED.
 
 Build FAILED.
 
-Time Elapsed 00:00:13.60
+Time Elapsed 00:00:07.68

@@ -1,4 +1,8 @@
 #include "AnimalCard.h"
+
+//Auteurs: Nicolas Daigle (7223444), Zachary Paquette (7230016)
+//Cours: CSI2772
+//Date de remise: 9 Decembre 2015
 	
 AnimalCard::AnimalCard(char a, char b, char c, char d)
 {

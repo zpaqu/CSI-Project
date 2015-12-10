@@ -6,7 +6,10 @@
 #include "QueryResult.h"
 #include <iostream>
 
-//Dont know what to do with wuery result yet...
+//Auteurs: Nicolas Daigle (7223444), Zachary Paquette (7230016)
+//Cours: CSI2772
+//Date de remise: 9 Decembre 2015
+
 enum action { Bear, Deer, Hare, Moose, Wolf };
 
 class ActionCard : public NoSplit

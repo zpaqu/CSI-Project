@@ -3,6 +3,11 @@
 #define Player_def
 #include <string>
 #include "Hand.h"
+
+//Auteurs: Nicolas Daigle (7223444), Zachary Paquette (7230016)
+//Cours: CSI2772
+//Date de remise: 9 Decembre 2015
+
 static bool bearSecret=true;
 static bool wolfSecret = true;
 static bool mooseSecret = true;
