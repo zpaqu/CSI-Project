@@ -31,36 +31,26 @@ int main() {
 	
 	Player* play[5];
 	Player p1(1);
-	std::cout << "on a player 1 " << std::endl;
-	system("PAUSE");
+	
 	play[0] = &p1;
 	activeHand = (&(*play[0]).getHand());
 	*activeHand += std::make_shared<AnimalCard>(myDeck.draw());
 	*activeHand += std::make_shared<AnimalCard>(myDeck.draw());
 	*activeHand += std::make_shared<AnimalCard>(myDeck.draw());
-	std::cout << "on a draw les cartes " << std::endl;
-	system("PAUSE");
 	Player p2(2);
 	play[1] = &p2;
-	std::cout << "on a p2" << std::endl;
-	system("PAUSE");
 	activeHand = (&(*play[1]).getHand());
 	*activeHand += std::make_shared<AnimalCard>(myDeck.draw());
 	*activeHand += std::make_shared<AnimalCard>(myDeck.draw());
 	*activeHand += std::make_shared<AnimalCard>(myDeck.draw());
-	std::cout << "on adraw les cartes " << std::endl;
-	system("PAUSE");
 	if (numJ >= 3) {
 		Player p3(3);
 		play[2] = &p3;
 		activeHand = (&(*play[2]).getHand());
-		std::cout << "on a p3 " << std::endl;
-		system("PAUSE");
 		*activeHand += std::make_shared<AnimalCard>(myDeck.draw());
 		*activeHand += std::make_shared<AnimalCard>(myDeck.draw());
 		*activeHand += std::make_shared<AnimalCard>(myDeck.draw());
-		std::cout << "on a draw les cart" << std::endl;
-		system("PAUSE");
+		
 	}
 
 
@@ -84,14 +74,16 @@ int main() {
 
 	
 	bool won = false;
-
+	std::cout << "going in the while" << std::endl;
+	system("PAUSE");
 	while (!won) {
 		//can save the game here
 		for (int i = 0; i < numJ; i++) {
 			if(!won){
 			bool cardPlacedLegaly = false;
-			t.print();
-			activeHand = (&(*play[i]).getHand());//not sure if that makes sence (the & placement)
+			//t.print(); 
+			//there is an error when calling t.print, unautorized access
+			activeHand = (&(*play[i]).getHand());
 			*activeHand += std::make_shared<AnimalCard>(myDeck.draw());
 			(*play[i]).print();
 			while (!cardPlacedLegaly)
@@ -101,10 +93,21 @@ int main() {
 					std::cout << "quel carte voulez vous selectionner (entre 0 et " << (*activeHand).cardNumber << ")" << endl;
 					std::cin >> cardN;
 				}
+				//on a mis des pauses pour demontrer ou le probleme est dans le programme
+				std::cout << "on a selectionner la carte" << std::endl;
+				system("PAUSE");
+				//c'est ici que le programme arrete de fonctionner, le proble est probablement avec l'operateur
 				std::shared_ptr<AnimalCard> activeCard = (*activeHand)[cardN];
+				std::cout << "la carte est active" << std::endl;
+				system("PAUSE");
 				if ((*activeCard).animals[0] >= 'A' && (*activeCard).animals[0] <= 'Z') {
-					//do whatever action cards do
+					std::shared_ptr<ActionCard> act;
+					//act =(ActionCard)activeCard;  //probleme avec cette 
+					QueryResult q=(*act).query;
+					(*act).perform(t,play[i],q);//the methode perform will do the action of the card
+					
 					cardPlacedLegaly = true;
+					
 				}
 				else {
 					int option = 0;
@@ -145,7 +148,10 @@ int main() {
 					}
 
 					for (int j = 0; j < numJ; j++) {
+						//ici on verifie si il y a un gagnant
 						won=t.win((*play[j]).getSecretAnimal());
+						std::cout << "Bravo! le gagnant est: " << (*play[j]).name << endl;
+
 					}
 
 				}

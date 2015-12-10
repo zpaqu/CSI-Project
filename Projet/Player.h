@@ -25,8 +25,9 @@ public:
 	void setHand(Hand);
 	int getNum();
 	void print();
-private:
 	std::string name;
+
+private:
 	int num;
 	std::string sAnimal;
 	Hand playerHand;
