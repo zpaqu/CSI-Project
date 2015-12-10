@@ -20,8 +20,12 @@ int main() {
 		std::cout << "entrer le nombre de joueurs" << std::endl;
 		std::cin >> numJ;
 	}
+	std::cout << numJ << std::endl;
+	system("PAUSE");
 	
-	Table* t= new Table(numJ);
+	Table t = Table(numJ);
+	
+	system("PAUSE");
 	Hand * activeHand;
 	AnimalCardFactory factory = AnimalCardFactory();
 	Deck<AnimalCard> myDeck=factory.getDeck();
@@ -75,7 +79,7 @@ int main() {
 		for (int i = 0; i < numJ; i++) {
 			if(!won){
 			bool cardPlacedLegaly = false;
-			(*t).print();
+			t.print();
 			activeHand = (&(*play[i]).getHand());//not sure if that makes sence (the & placement)
 			*activeHand += std::make_shared<AnimalCard>(myDeck.draw());
 			(*play[i]).print();
@@ -114,7 +118,7 @@ int main() {
 							std::cin >> y;
 						}
 						try {
-							(*t).addAt(activeCard, x, y);
+							t.addAt(activeCard, x, y);
 							*activeHand -= activeCard;
 							cardPlacedLegaly = true;
 
@@ -130,7 +134,7 @@ int main() {
 					}
 
 					for (int j = 0; j < numJ; j++) {
-						won=(*t).win((*play[j]).getSecretAnimal());
+						won=t.win((*play[j]).getSecretAnimal());
 					}
 
 				}
