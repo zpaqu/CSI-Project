@@ -20,11 +20,19 @@ int main() {
 		std::cout << "entrer le nombre de joueurs" << std::endl;
 		std::cin >> numJ;
 	}
+<<<<<<< HEAD
 	std::cout << "on a les joueurs" << std::endl;
 	system("PAUSE");
 
 	Table t = Table(numJ);
 	std::cout << "on a la table" << std::endl;
+=======
+	std::cout << numJ << std::endl;
+	system("PAUSE");
+	
+	Table t = Table(numJ);
+	
+>>>>>>> origin/master
 	system("PAUSE");
 	Hand * activeHand;
 	std::cout << "on a fait une hand" << std::endl;
