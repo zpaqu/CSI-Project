@@ -6,6 +6,17 @@
 #include "SplitThree.h"
 #include "SplitTwo.h"
 
+template <class T>
+class Deck : public std::vector<T>
+{
+public:
+	T draw();
+	void add(T c);
+
+private:
+
+};
+
 class AnimalCardFactory
 {
 public:

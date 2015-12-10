@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 #include "Player.h"
 #include "AnimalCardFactory.h"
@@ -7,6 +8,8 @@
 #include "Hand.h"
 #include "Exception.h"
 
+
+
 int main() {
 	//option to load from file
 	int numJ = 0;
@@ -15,6 +18,7 @@ int main() {
 		std::cout << "entrer le nombre de joueurs" << std::endl;
 		std::cin >> numJ;
 	}
+	
 	Table* t= new Table(numJ);
 	Hand * activeHand;
 	AnimalCardFactory factory = AnimalCardFactory();
@@ -27,7 +31,7 @@ int main() {
 	*activeHand += std::make_shared<AnimalCard>(myDeck.draw());
 	*activeHand += std::make_shared<AnimalCard>(myDeck.draw());
 	*activeHand += std::make_shared<AnimalCard>(myDeck.draw());
-
+	
 	Player p2(2);
 	play[1] = &p2;
 	activeHand = (&(*play[1]).getHand());
@@ -61,7 +65,7 @@ int main() {
 		*activeHand += std::make_shared<AnimalCard>(myDeck.draw());
 	}
 
-
+	
 	bool won = false;
 
 	while (!won) {
@@ -72,7 +76,7 @@ int main() {
 			(*t).print();
 			activeHand = (&(*play[i]).getHand());//not sure if that makes sence (the & placement)
 			*activeHand += std::make_shared<AnimalCard>(myDeck.draw());
-			(*play[i]).print;
+			(*play[i]).print();
 			while (!cardPlacedLegaly)
 			{
 				int cardN = -1;
@@ -141,6 +145,3 @@ int main() {
 
 }
 
-bool winner() {
-	return false;
-}
