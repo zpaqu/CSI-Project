@@ -18,12 +18,14 @@ Hand& Hand::operator+=(std::shared_ptr<AnimalCard> param)
 {
 	cards.push_back(param);
 	cardNumber++;
+	return *this;
 }
 
 Hand& Hand::operator-=(std::shared_ptr<AnimalCard> param)
 {
 	cards.remove(param);
 	cardNumber--;
+	return *this;
 }
 
 
