@@ -4,10 +4,7 @@
 #include <memory>
 #include "AnimalCard.h"
 
-<<<<<<< HEAD
 //using namespace std;
-=======
->>>>>>> origin/master
 //Auteurs: Nicolas Daigle (7223444), Zachary Paquette (7230016)
 //Cours: CSI2772
 //Date de remise: 9 Decembre 2015
@@ -24,8 +21,6 @@ public:
 private:
 
 };
-<<<<<<< HEAD
-#include "Deck.h"
 
 
 //Auteurs: Nicolas Daigle (7223444), Zachary Paquette (7230016)
@@ -48,5 +43,4 @@ void Deck<T>::add(T t) // Ajoute un objet dans le Deck. Dans ce cas ce sera un o
 {
 	push_back(t);
 }
-=======
->>>>>>> origin/master
+

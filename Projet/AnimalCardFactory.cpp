@@ -12,14 +12,12 @@
 //Cours: CSI2772
 //Date de remise: 9 Decembre 2015
 
-<<<<<<< HEAD
 
 
 //Lorssqu'une AnimalCardFactory est cree, on ajoute toute les possibilites de carte dans un Deck de type AnimalCard
-=======
+
 
 //Lorsqu'une AnimalCardFactory est cree, on ajoute toute les possibilites de carte dans un Deck de type AnimalCard
->>>>>>> origin/master
 AnimalCardFactory::AnimalCardFactory()
 {
 	
