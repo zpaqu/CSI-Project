@@ -20,11 +20,21 @@ int main() {
 		std::cout << "entrer le nombre de joueurs" << std::endl;
 		std::cin >> numJ;
 	}
-	
-	Table* t= new Table(numJ);
+	std::cout << "on a les joueurs" << std::endl;
+	system("PAUSE");
+
+	Table t = Table(numJ);
+	std::cout << "on a la table" << std::endl;
+	system("PAUSE");
 	Hand * activeHand;
+	std::cout << "on a fait une hand" << std::endl;
+	system("PAUSE");
 	AnimalCardFactory factory = AnimalCardFactory();
+	std::cout << "on a la factory" << std::endl;
+	system("PAUSE");
 	Deck<AnimalCard> myDeck=factory.getDeck();
+	std::cout << "on a  deck" << std::endl;
+	system("PAUSE");
 	
 	Player* play[5];
 	Player p1(1);
@@ -75,7 +85,7 @@ int main() {
 		for (int i = 0; i < numJ; i++) {
 			if(!won){
 			bool cardPlacedLegaly = false;
-			(*t).print();
+			t.print();
 			activeHand = (&(*play[i]).getHand());//not sure if that makes sence (the & placement)
 			*activeHand += std::make_shared<AnimalCard>(myDeck.draw());
 			(*play[i]).print();
@@ -114,7 +124,7 @@ int main() {
 							std::cin >> y;
 						}
 						try {
-							(*t).addAt(activeCard, x, y);
+							t.addAt(activeCard, x, y);
 							*activeHand -= activeCard;
 							cardPlacedLegaly = true;
 
@@ -130,7 +140,7 @@ int main() {
 					}
 
 					for (int j = 0; j < numJ; j++) {
-						won=(*t).win((*play[j]).getSecretAnimal());
+						won=t.win((*play[j]).getSecretAnimal());
 					}
 
 				}

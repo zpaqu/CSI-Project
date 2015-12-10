@@ -10,7 +10,10 @@
 Table::Table(int players)
 {
 	numPlayers = players;
-	tableau[103][103];
+	tableau = new std::shared_ptr<AnimalCard>*[103];
+	for (int i = 0; i < 103; i++) {
+		tableau[i] = new std::shared_ptr<AnimalCard>[103];
+	}
 	std::shared_ptr<AnimalCard> start(new StartCard());
 	addAt(start, 52, 52);
 }
@@ -107,7 +110,10 @@ bool Table::win(std::string& animal)
 //Verifie si la position entree par l'utilisateur est bien une position valide
 bool Table::validPosition(std::shared_ptr<AnimalCard> card, int x, int y)
 {
-	if (tableau[x][y] == nullptr)
+	if ((*card).animals[0] == 'c') {
+		return true;
+	}
+	if (!tableau[x][y])
 	{
 		//Joker and Start Card
 		if ((x > 0 && y >= 0 && x < 103 && y < 103 && (tableau[x - 1][y]->animals[0] == 'j' || tableau[x - 1][y]->animals[0] == 'c'))
