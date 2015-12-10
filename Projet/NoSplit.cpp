@@ -12,5 +12,5 @@ NoSplit::NoSplit(char a) : AnimalCard(a,a,a,a)
 
 NoSplit::~NoSplit()
 {
-	delete[] animals;
+	//delete[] animals;
 }

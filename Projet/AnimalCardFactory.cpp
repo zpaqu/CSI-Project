@@ -110,7 +110,7 @@ AnimalCardFactory::AnimalCardFactory()
 	//joker
 	myDeck.add(Joker());
 
-	delete animals;
+	//delete animals;
 
 }
 

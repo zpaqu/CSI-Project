@@ -14,7 +14,7 @@ AnimalCard::AnimalCard(char a, char b, char c, char d)
 	
 AnimalCard::~AnimalCard()
 {
-	delete[] animals;
+	//delete[] animals;
 }
 
 void AnimalCard::print()

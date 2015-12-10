@@ -110,18 +110,12 @@ bool Table::win(std::string& animal)
 //Verifie si la position entree par l'utilisateur est bien une position valide
 bool Table::validPosition(std::shared_ptr<AnimalCard> card, int x, int y)
 {
-<<<<<<< HEAD
-	if ((*card).animals[0] == 'c') {
-		return true;
-	}
 	if (!tableau[x][y])
-=======
 	if (card->animals[0] == 'c')
 	{
 		return true;
 	}
 	else if (!tableau[x][y])
->>>>>>> origin/master
 	{
 		//Joker and Start Card
 		if ((x > 0 && y >= 0 && x < 103 && y < 103 && (tableau[x - 1][y]->animals[0] == 'j' || tableau[x - 1][y]->animals[0] == 'c'))

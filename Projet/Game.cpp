@@ -20,52 +20,49 @@ int main() {
 		std::cout << "entrer le nombre de joueurs" << std::endl;
 		std::cin >> numJ;
 	}
-<<<<<<< HEAD
-	std::cout << "on a les joueurs" << std::endl;
-	system("PAUSE");
 
 	Table t = Table(numJ);
-	std::cout << "on a la table" << std::endl;
-=======
-	std::cout << numJ << std::endl;
-	system("PAUSE");
 	
-	Table t = Table(numJ);
 	
->>>>>>> origin/master
-	system("PAUSE");
 	Hand * activeHand;
-	std::cout << "on a fait une hand" << std::endl;
-	system("PAUSE");
 	AnimalCardFactory factory = AnimalCardFactory();
-	std::cout << "on a la factory" << std::endl;
-	system("PAUSE");
+	
 	Deck<AnimalCard> myDeck=factory.getDeck();
-	std::cout << "on a  deck" << std::endl;
-	system("PAUSE");
 	
 	Player* play[5];
 	Player p1(1);
+	std::cout << "on a player 1 " << std::endl;
+	system("PAUSE");
 	play[0] = &p1;
 	activeHand = (&(*play[0]).getHand());
 	*activeHand += std::make_shared<AnimalCard>(myDeck.draw());
 	*activeHand += std::make_shared<AnimalCard>(myDeck.draw());
 	*activeHand += std::make_shared<AnimalCard>(myDeck.draw());
-	
+	std::cout << "on a draw les cartes " << std::endl;
+	system("PAUSE");
 	Player p2(2);
 	play[1] = &p2;
+	std::cout << "on a p2" << std::endl;
+	system("PAUSE");
 	activeHand = (&(*play[1]).getHand());
 	*activeHand += std::make_shared<AnimalCard>(myDeck.draw());
 	*activeHand += std::make_shared<AnimalCard>(myDeck.draw());
 	*activeHand += std::make_shared<AnimalCard>(myDeck.draw());
+	std::cout << "on adraw les cartes " << std::endl;
+	system("PAUSE");
 	if (numJ >= 3) {
 		Player p3(3);
 		play[2] = &p3;
 		activeHand = (&(*play[2]).getHand());
+		std::cout << "on a p3 " << std::endl;
+		system("PAUSE");
 		*activeHand += std::make_shared<AnimalCard>(myDeck.draw());
 		*activeHand += std::make_shared<AnimalCard>(myDeck.draw());
 		*activeHand += std::make_shared<AnimalCard>(myDeck.draw());
+		std::cout << "on a draw les cart" << std::endl;
+		system("PAUSE");
 	}
+
 
 	if (numJ >= 4) {
 		Player p4(4);
