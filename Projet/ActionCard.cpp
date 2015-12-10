@@ -4,6 +4,8 @@
 //Cours: CSI2772
 //Date de remise: 9 Decembre 2015
 
+
+//La variable publique act de Action Card obtient sa valeur d'enumeration par la valeur entree en parametre en construisant la carte d'action
 ActionCard::ActionCard(char c) : NoSplit(c)
 {
 	if (c == 'B')
@@ -35,8 +37,10 @@ ActionCard::ActionCard(char c) : NoSplit(c)
 
 ActionCard::~ActionCard()
 {
+
 }
 
+//Query choisit quel chemin prendre par rapport a la valeur de la variable act de la classe ActionCard. Les variables sont assignes par entree de l'utilisateur
 QueryResult ActionCard::query()
 {
 	QueryResult q = QueryResult();
@@ -89,8 +93,12 @@ QueryResult ActionCard::query()
 	return q;
 }
 
+//Perform s'execute a l'aide de la valuer de l'enumaration act
 void ActionCard::perform(Table& t, Player* p , QueryResult q)
 {
+	/*On trouve le "Other Player" a l'aide de la difference entre le numero du joueur courant et le numero du joueur voulu demande pendant query. 
+	On peut deplacer un pointeur temporaire dans la direction de la difference. Lorsque cet autre joueur est trouver, on assigne une Hand temporaire et on change les positions des mains des joueurs*/
+
 	if (act == Bear) {
 		Player* oP = p+(q.playerNum - p->getNum());
 		Hand tH = p->getHand();
@@ -98,6 +106,7 @@ void ActionCard::perform(Table& t, Player* p , QueryResult q)
 		oP->setHand(tH);
 	}
 
+	//On trouve le "Other Player" comme dans BearAction mais cette fois si c'est l'animal secret qu'on jongle avec une valeur temporaire.
 	else if (act == Deer) {
 		Player* oP = p + (q.playerNum - p->getNum());
 		std::string tS = p->getSecretAnimal();
@@ -105,6 +114,7 @@ void ActionCard::perform(Table& t, Player* p , QueryResult q)
 		oP->swapSecretAnimal(tS);
 	}
 
+	//On enleve le pointeur a la carte et on la place a la position voulu par l'utilisateur
 	else if (act == Hare) {
 		std::shared_ptr<AnimalCard> sP1 = t.pickAt(q.cX, q.cY);
 		if (sP1 != nullptr)
@@ -113,6 +123,8 @@ void ActionCard::perform(Table& t, Player* p , QueryResult q)
 		}
 	}
 
+	//On assigne un pointeur temporaire a la fin de la liste. On sauvegarde son animal secret. Les animaux secrets sont remplaces par l'animal du pointeur precedent celui courant.
+	//L'animal temporaire est assigne a la fin quand le pointeur pointe au premier element de l'array de joueur
 	else if (act == Moose) {
 		Player* lP = p + (t.numPlayers - p->getNum());
 
@@ -125,6 +137,7 @@ void ActionCard::perform(Table& t, Player* p , QueryResult q)
 		lP->swapSecretAnimal(tA);
 	}
 
+	//Ici on retire la carte de la table et on la place dans la main du joueur. 
 	else if (act == Wolf) {
 		std::shared_ptr<AnimalCard> sP = t.pickAt(q.cX, q.cY);
 		p->getHand() += sP;

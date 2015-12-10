@@ -13,6 +13,7 @@
 //Date de remise: 9 Decembre 2015
 
 
+//Lorssqu'une AnimalCardFactory est cree, on ajoute toute les possibilites de carte dans un Deck de type AnimalCard
 AnimalCardFactory::AnimalCardFactory()
 {
 	
@@ -109,14 +110,14 @@ AnimalCardFactory::AnimalCardFactory()
 
 }
 
+//Retourne un pointeur a une nouvelle AnimalCardFactory
 AnimalCardFactory * AnimalCardFactory::getFactory()
 {
 	AnimalCardFactory * fact = new AnimalCardFactory();
 	return fact;
-
-	//dont forget the destructor in whatever will call this
 }
 
+//Retourne le Deck brasser
 Deck<AnimalCard> AnimalCardFactory::getDeck()
 {
 	std::random_shuffle(std::begin(myDeck), std::end(myDeck));

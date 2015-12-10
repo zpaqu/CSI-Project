@@ -67,5 +67,4 @@ void AnimalCard::printRow(EvenOdd e)
 	return;
 }
 
-//Methodes Virtuelles : Classe Abstraite
 
