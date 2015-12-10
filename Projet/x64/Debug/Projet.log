@@ -1,36 +1,10 @@
-﻿Build started 12/9/2015 5:28:43 PM.
+﻿Build started 12/9/2015 7:31:35 PM.
      1>Project "C:\Users\Zachary\Documents\GitHub\CSI-Project\Projet\Projet.vcxproj" on node 2 (ClCompile target(s)).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"x64\Debug\\" /Fd"x64\Debug\vc140.pdb" /Gd /TP /errorReport:prompt ActionCard.cpp
          ActionCard.cpp
-     1>c:\users\zachary\documents\github\csi-project\projet\actioncard.h(16): error C3646: 'query': unknown override specifier
-     1>c:\users\zachary\documents\github\csi-project\projet\actioncard.h(16): error C2059: syntax error: ')'
-     1>c:\users\zachary\documents\github\csi-project\projet\actioncard.h(16): error C2238: unexpected token(s) preceding ';'
-     1>c:\users\zachary\documents\github\csi-project\projet\actioncard.h(17): error C2061: syntax error: identifier 'QueryResult'
-     1>c:\users\zachary\documents\github\csi-project\projet\hand.h(7): error C2011: 'Hand': 'class' type redefinition
-         c:\users\zachary\documents\github\csi-project\projet\hand.h(7): note: see declaration of 'Hand'
-     1>c:\users\zachary\documents\github\csi-project\projet\actioncard.cpp(38): error C2039: 'query': is not a member of 'ActionCard'
-         c:\users\zachary\documents\github\csi-project\projet\actioncard.h(10): note: see declaration of 'ActionCard'
-     1>c:\users\zachary\documents\github\csi-project\projet\actioncard.cpp(42): error C2065: 'act': undeclared identifier
-     1>c:\users\zachary\documents\github\csi-project\projet\actioncard.cpp(49): error C2065: 'act': undeclared identifier
-     1>c:\users\zachary\documents\github\csi-project\projet\actioncard.cpp(56): error C2065: 'act': undeclared identifier
-     1>c:\users\zachary\documents\github\csi-project\projet\actioncard.cpp(69): error C2065: 'act': undeclared identifier
-     1>c:\users\zachary\documents\github\csi-project\projet\actioncard.cpp(75): error C2065: 'act': undeclared identifier
-     1>c:\users\zachary\documents\github\csi-project\projet\actioncard.cpp(91): error C2511: 'void ActionCard::perform(Table &,Player *,QueryResult)': overloaded member function not found in 'ActionCard'
-         c:\users\zachary\documents\github\csi-project\projet\actioncard.h(10): note: see declaration of 'ActionCard'
-     1>c:\users\zachary\documents\github\csi-project\projet\actioncard.cpp(92): error C2677: binary '==': no global operator found which takes type 'action' (or there is no acceptable conversion)
-     1>c:\users\zachary\documents\github\csi-project\projet\actioncard.cpp(93): error C2079: 'a' uses undefined class 'Hand'
-     1>c:\users\zachary\documents\github\csi-project\projet\actioncard.cpp(93): error C2027: use of undefined type 'Hand'
-         c:\users\zachary\documents\github\csi-project\projet\hand.h(7): note: see declaration of 'Hand'
-         c:\users\zachary\documents\github\csi-project\projet\hand.h(7): note: see declaration of 'Hand'
-     1>c:\users\zachary\documents\github\csi-project\projet\actioncard.cpp(93): error C2227: left of '->{dtor}' must point to class/struct/union/generic type
-         c:\users\zachary\documents\github\csi-project\projet\actioncard.cpp(93): note: type is 'Player *'
-     1>c:\users\zachary\documents\github\csi-project\projet\actioncard.cpp(93): fatal error C1903: unable to recover from previous error(s); stopping compilation
-         INTERNAL COMPILER ERROR in 'C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\bin\x86_amd64\CL.exe'
-             Please choose the Technical Support command on the Visual C++
-             Help menu, or open the Technical Support help file for more information
-     1>Done Building Project "C:\Users\Zachary\Documents\GitHub\CSI-Project\Projet\Projet.vcxproj" (ClCompile target(s)) -- FAILED.
+     1>Done Building Project "C:\Users\Zachary\Documents\GitHub\CSI-Project\Projet\Projet.vcxproj" (ClCompile target(s)).
 
-Build FAILED.
+Build succeeded.
 
-Time Elapsed 00:00:00.96
+Time Elapsed 00:00:00.72

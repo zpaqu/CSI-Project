@@ -1,6 +1,5 @@
-#pragma once
 #include "ActionCard.h"
-#include "Hand.h"
+
 
 ActionCard::ActionCard(char c) : NoSplit(c)
 {
@@ -90,15 +89,17 @@ QueryResult ActionCard::query()
 void ActionCard::perform(Table& t, Player* p , QueryResult q)
 {
 	if (act == Bear) {
-		Hand a = p->getHand();
-		Hand b = p[q.playerNum].getHand();
-		//Switch pointers of hands
+		Player* oP = p+(q.playerNum - p->getNum());
+		Hand tH = p->getHand();
+		p->setHand(oP->getHand());
+		oP->setHand(tH);
 	}
 
 	else if (act == Deer) {
-		std::string s = p->getSecretAnimal();
-		p->swapSecretAnimal(p[q.playerNum].getSecretAnimal());
-		p[q.playerNum].swapSecretAnimal(s); 
+		Player* oP = p + (q.playerNum - p->getNum());
+		std::string tS = p->getSecretAnimal();
+		p->swapSecretAnimal(oP->getSecretAnimal());
+		oP->swapSecretAnimal(tS);
 	}
 
 	else if (act == Hare) {
@@ -110,21 +111,17 @@ void ActionCard::perform(Table& t, Player* p , QueryResult q)
 	}
 
 	else if (act == Moose) {
-		for (int i = 0; i < p->getNum(); i++)
+		Player* lP = p + (t.numPlayers - p->getNum());
+
+		std::string tA = lP->getSecretAnimal();
+
+		for (int i = t.numPlayers; i >1 ; i--)
 		{
-			--p;
+			lP->swapSecretAnimal((--lP)->getSecretAnimal());
 		}
-		
-		Player* tP = p;
-		std::string tempA = (tP + (t.numPlayers - 1))->getSecretAnimal();
-
-		for (int i = 0; i < t.numPlayers; i++)
-		{
-
-		}
-
-
+		lP->swapSecretAnimal(tA);
 	}
+
 	else if (act == Wolf) {
 		std::shared_ptr<AnimalCard> sP = t.pickAt(q.cX, q.cY);
 		p->getHand() += sP;
@@ -136,7 +133,3 @@ void ActionCard::perform(Table& t, Player* p , QueryResult q)
 	}
 
 }
-
-QueryResult::QueryResult(){ }
-
-QueryResult::~QueryResult(){ }

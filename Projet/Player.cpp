@@ -57,7 +57,12 @@ int Player::getNum()
 
 Hand Player::getHand()
 {
-	return playerHand();
+	return playerHand;
+}
+
+void Player::setHand(Hand h)
+{
+	playerHand = h;
 }
 
 std::string Player::swapSecretAnimal(std::string& a)

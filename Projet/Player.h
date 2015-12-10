@@ -12,12 +12,12 @@ class Player
 	
 {
 public:
-	 
 	Player(int pn);
 	~Player();
 	std::string swapSecretAnimal(std::string&);
 	std::string getSecretAnimal();
 	Hand getHand();
+	void setHand(Hand);
 	int getNum();
 	void print();
 private:

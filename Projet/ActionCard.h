@@ -1,11 +1,13 @@
 #pragma once
-#include "NoSplit.h"
+#include "AnimalCard.h"
 #include "Table.h"
 #include "Player.h"
+#include "Hand.h"
+#include "QueryResult.h"
 #include <iostream>
 
 //Dont know what to do with wuery result yet...
-enum action {Bear,Deer,Hare,Moose,Wolf};
+enum action { Bear, Deer, Hare, Moose, Wolf };
 
 class ActionCard : public NoSplit
 {
@@ -19,18 +21,7 @@ private:
 
 };
 
-class QueryResult
-{
-public:
-	int playerNum; 
-	int cX, cY, rX, rY; //Coordonnee X, Y et Resultat X, Y
 
-	QueryResult();
-	~QueryResult();
-
-private:
-
-};
 
 
 
