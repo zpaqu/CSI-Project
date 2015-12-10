@@ -8,35 +8,35 @@
 
 int main() {
 	//option to load from file
-
-	Table t();
-	Hand * activeHand;
-	AnimalCardFactory factory;
-	Deck<std::shared_ptr<AnimalCard>> myDeck=factory.getDeck();
-	int numJ=0;
+	int numJ = 0;
 	while (numJ < 2 || numJ>5) {
 
 		std::cout << "entrer le nombre de joueurs" << std::endl;
 		std::cin >> numJ;
 	}
+	Table* t= new Table(numJ);
+	Hand * activeHand;
+	AnimalCardFactory factory;
+	Deck<AnimalCard> myDeck=factory.getDeck();
+	
 	Player* play[5];
 	Player p1(1);
-	play[0] = p1;
-	activeHand = &play[0].getHand();
+	play[0] = &p1;
+	activeHand = (&(*play[0]).getHand());
 	activeHand += myDeck.draw();
 	activeHand += myDeck.draw();
 	activeHand += myDeck.draw();
 
 	Player p2(2);
-	play[1] = p2;
-	activeHand = &play[1].getHand();
+	play[1] = &p2;
+	activeHand = (&(*play[1]).getHand());
 	activeHand += myDeck.draw();
 	activeHand += myDeck.draw();
 	activeHand += myDeck.draw();
 	if (numJ >= 3) {
 		Player p3(3);
-		play[2] = p3;
-		activeHand = &play[2].getHand();
+		play[2] = &p3;
+		activeHand = (&(*play[2]).getHand());
 		activeHand += myDeck.draw();
 		activeHand += myDeck.draw();
 		activeHand += myDeck.draw();
@@ -44,8 +44,8 @@ int main() {
 
 	if (numJ >= 4) {
 		Player p4(4);
-		play[3] = p4;
-		activeHand = &play[3].getHand();
+		play[3] = &p4;
+		activeHand = (&(*play[3]).getHand());
 		activeHand += myDeck.draw();
 		activeHand += myDeck.draw();
 		activeHand += myDeck.draw();
@@ -53,8 +53,8 @@ int main() {
 
 	if (numJ >= 5) {
 		Player p5(5);
-		play[4] = p5;
-		activeHand = &play[4].getHand();
+		play[4] = &p5;
+		activeHand = (&(*play[4]).getHand());
 		activeHand += myDeck.draw();
 		activeHand += myDeck.draw();
 		activeHand += myDeck.draw();
@@ -68,30 +68,30 @@ int main() {
 		for (int i = 0; i < numJ; i++) {
 			if(!won){
 			bool cardPlacedLegaly = false;
-			t.print();
-			activeHand = &(play[i].getHand());//not sure if that makes sence (the & placement)
+			(*t).print();
+			activeHand = (&(*play[i]).getHand());//not sure if that makes sence (the & placement)
 			activeHand += myDeck.draw();
-			play[i].print;
+			(*play[i]).print;
 			while (!cardPlacedLegaly)
 			{
 				int cardN = -1;
-				while (cardNr<0 || cardN> activeHand.cardNumber) {
-					std::cout << "quel carte voulez vous selectionner (entre 0 et " << activeHand.cardNumber << ")" << endl;
+				while (cardN<0 || cardN> (*activeHand).cardNumber) {
+					std::cout << "quel carte voulez vous selectionner (entre 0 et " << (*activeHand).cardNumber << ")" << endl;
 					std::cin >> cardN;
 				}
-				std::shared_ptr<AnimalCard> activeCard = activeHand[cardN];
-				if (activeCard.animals[0] >= 'A' && activeCard.animals[0] <= 'Z') {
+				std::shared_ptr<AnimalCard> activeCard = (*activeHand)[cardN];
+				if ((*activeCard).animals[0] >= 'A' && (*activeCard).animals[0] <= 'Z') {
 					//do whatever action cards do
 					cardPlacedLegaly = true;
 				}
 				else {
 					int option = 0;
 					while (option != 1 && option != 3) {
-						activeCard.print();
+						(*activeCard).print();
 						std::cout << "choisir un option (1-3)" << endl << "option1: placer la carte sur la table" << endl;
 						std::cout << "Option2: tournez la carte de 180 degre" << endl << "option3: passer votre tour" << endl;
 						if (option == 2) {
-							activeCard.changeOrientation();
+							(*activeCard).changeOrientation();
 						}
 					}
 					if (option == 1) {
@@ -107,7 +107,7 @@ int main() {
 							std::cin >> y;
 						}
 						try() {
-							t.addAt(activeCard, x, y);
+							(*t).addAt(activeCard, x, y);
 							activeHand -= activeCard;
 							cardPlacedLegaly = true;
 
@@ -123,7 +123,7 @@ int main() {
 					}
 
 					for (int j = 0; j < numJ; j++) {
-						won=t.won(play[j].getSecretAnimal());
+						won=(*t).win((*play[j]).getSecretAnimal());
 					}
 
 				}
