@@ -1,6 +1,12 @@
 #include "Table.h"
 #include "Exception.h"
 
+//Auteurs: Nicolas Daigle (7223444), Zachary Paquette (7230016)
+//Cours: CSI2772
+//Date de remise: 9 Decembre 2015
+
+
+//Constructeur du tableau. Le nombre de joueur est passe en parametre
 Table::Table(int players)
 {
 	numPlayers = players;
@@ -14,6 +20,7 @@ Table::~Table()
 	delete[] tableau;
 }
 
+//On ajoute le pointeur a une carte passe en parametre a une case dans le tableau du jeu. Une exception est lancee si la position est invalide
 int Table::addAt(std::shared_ptr<AnimalCard> card, int x, int y)
 {
 	if (validPosition(card, x, y))
@@ -28,6 +35,7 @@ int Table::addAt(std::shared_ptr<AnimalCard> card, int x, int y)
 	return tableau[x][y]->animalNumber;
 }
 
+//Retire le pointeur a une position donnee dans le tableau. Null si la position est vide
 std::shared_ptr<AnimalCard> Table::pickAt(int x, int y)
 {
 	if (tableau[x][y] == nullptr) {
@@ -40,6 +48,7 @@ std::shared_ptr<AnimalCard> Table::pickAt(int x, int y)
 	}
 }
 
+//Retourne le pointeur a la carte d'une position donnee
 std::shared_ptr<AnimalCard> Table::get(int x, int y)
 {
 	if (tableau[x][y] == nullptr) {
@@ -50,6 +59,7 @@ std::shared_ptr<AnimalCard> Table::get(int x, int y)
 	}
 }
 
+//Verifie s'il y a un gagnant par rapport au nom de l'animal passe en reference
 bool Table::win(std::string& animal)
 {
 	int count = 0;
@@ -94,6 +104,7 @@ bool Table::win(std::string& animal)
 	}
 }
 
+//Verifie si la position entree par l'utilisateur est bien une position valide
 bool Table::validPosition(std::shared_ptr<AnimalCard> card, int x, int y)
 {
 	if (tableau[x][y] == nullptr)
@@ -134,6 +145,7 @@ bool Table::validPosition(std::shared_ptr<AnimalCard> card, int x, int y)
 	}
 }
 
+//Verifie s'il y a un animal correspondant au char passee en parametre sur la carte passee en parametre. Retourne un si oui (elle sera ajoute au compte total pour la methode win())
 int Table::compare(std::shared_ptr<AnimalCard> card, char a)
 {
 	if (card->animals[0] == a || card->animals[1] == a || card->animals[2] == a || card->animals[3] == a)
@@ -146,6 +158,7 @@ int Table::compare(std::shared_ptr<AnimalCard> card, char a)
 	}
 }
 
+//Imprite la table courante sur la console
 void Table::print()
 {
 	for (int y = 0; y < 103; y++) {

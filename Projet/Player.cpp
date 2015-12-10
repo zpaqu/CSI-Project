@@ -1,5 +1,11 @@
 #include "Player.h"
 
+//Auteurs: Nicolas Daigle (7223444), Zachary Paquette (7230016)
+//Cours: CSI2772
+//Date de remise: 9 Decembre 2015
+
+
+//Un joueur est assigne un animal secret seulement que si la variable statique boolean n'est pas active. Lorsuq'elle est active (true), un joueur ne peut plus avoir l'animal puisqu'il est en jeu
 Player::Player(int pn)
 {
 	num = pn; 
@@ -65,6 +71,7 @@ void Player::setHand(Hand h)
 	playerHand = h;
 }
 
+//Le nom de l'animal est assigne au joueur et on retourne son animal
 std::string Player::swapSecretAnimal(std::string& a)
 {
 	std::string temp = a;
@@ -76,7 +83,6 @@ std::string Player::swapSecretAnimal(std::string& a)
 std::string Player::getSecretAnimal()
 {
 	return sAnimal;
-
 }
 
 
