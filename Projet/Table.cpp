@@ -162,13 +162,13 @@ void Table::print()
 					std::cout << "0";
 				std::cout << "x";
 			}
-			*tableau[x][y].printRow(Odd);
+			(*tableau[x][y]).printRow(Odd);
 		}
 		for (int x = 0; x < 103; x++) {
 			if (y == 0) {
 				std::cout << "   ";
 			}
-			*tableau[x][y].printRow(Even);
+			(*tableau[x][y]).printRow(Even);
 			std::cout << " ";
 		}
 		std::cout << std::endl;
