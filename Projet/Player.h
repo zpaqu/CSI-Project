@@ -1,16 +1,16 @@
+#pragma once
+#ifndef Player_def
+#define Player_def
 #include <string>
 #include "Hand.h"
-
 static bool bearSecret=true;
 static bool wolfSecret = true;
 static bool mooseSecret = true;
 static bool dearSecret = true;
 static bool hareSecret = true;
+#endif
 
-
-class Player
-	
-{
+class Player{
 public:
 	Player(int pn);
 	~Player();
