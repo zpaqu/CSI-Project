@@ -5,6 +5,7 @@
 #include "Table.h"
 #include "Deck.h"
 #include "Hand.h"
+#include "Exception.h"
 
 int main() {
 	//option to load from file
@@ -106,14 +107,14 @@ int main() {
 							std::cout << "veuillez entrer la position x ou vous voulez placer la carte" << endl;
 							std::cin >> y;
 						}
-						try() {
+						try {
 							(*t).addAt(activeCard, x, y);
 							activeHand -= activeCard;
 							cardPlacedLegaly = true;
 
 						}
-						catch () {
-							std::cout << "le placement na pas fonctionner" << endl;
+						catch (Exception w) {
+							w.report();
 						}
 
 					}
